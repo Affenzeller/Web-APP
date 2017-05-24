@@ -3,31 +3,46 @@
 @{
     ViewBag.Title = "Home Page";
 }
+<style>
+    .zentrierung{
+        margin:auto;
+        width:60%;
+    }
+    .zentrierungButton{
+        margin:auto;
+        width:68%;
+    }
+
+
+
+
+</style>
+<!--LoginController LoginView --> 
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-xs-12"> 
+        <div class="col-sm-12 col-xs-12 zentrierung"> 
             <!--Logo-->
             <img src="~/fonts/AuftrLogo.bmp" alt="IOMLogo" > 
         </div>
         <form class="form-horizontal">
-            <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-12 col-xs-12 zentrierung">
                 <!--Benutzername-->
                 <div class="form-group">
                     <label for="usr">Benutzername:</label>
                     <input type = "text" class="form-control" id="Benutzername">
                 </div>
             </div>
-            <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-12 col-xs-12 zentrierung">
                 <!--Passwort-->
                 <div class="form-group">
                     <label for="pwd">Passwort:</label>
                     <input type = "password" class="form-control" id="passwort">
                 </div>
             </div>
-            <div class="col-sm-12 col-xs-12">
+            <div class="col-sm-12 col-xs-12 zentrierungButton">
                 <!--Button Login-->
-                <div class="col-lg-6">
+                <div class="">
                     <a href="@Url.Action("Index", "Home")">
                         <input type="button" class="btn btn-primary btn-lg" value="Login" />
                     </a>
