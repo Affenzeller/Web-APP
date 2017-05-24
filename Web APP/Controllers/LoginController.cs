@@ -9,23 +9,10 @@ namespace Web_APP.Controllers
     public class LoginController : Controller
     {
         //1.Schritt Login
-        public ActionResult Login()
+        public ActionResult IndexLogin()
         {
-            //LoginModel test = new LoginModel();
-            //ViewBag.IDKunde = new SelectList(dataseven.Login, "id", "name", "password");
-
-            return View(
-                //test
-                );
+            return View();
         }
-        //[HttpPost]
-        //public ActionResult Login(id, name, password)
-        //{
-        //    return View();
-        //}
-
-        
-
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

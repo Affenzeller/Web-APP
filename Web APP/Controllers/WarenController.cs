@@ -6,13 +6,11 @@ using System.Web.Mvc;
 
 namespace Web_APP.Controllers
 {
-    public class HomeController : Controller
+    public class WarenController : Controller
     {
-        // GET: Home
-        public ActionResult IndexHome()
+        // GET: Waren
+        public ActionResult IndexWaren()
         {
-
-
             return View();
         }
     }

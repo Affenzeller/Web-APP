@@ -200,7 +200,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KundenController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\StatistikController.cs" />
+    <Compile Include="Controllers\WarenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,6 +216,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\AuftrLogo.bmp" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\Glyphicons\royal-crown.png" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -244,8 +248,13 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\About.cshtml" />
     <Content Include="Views\Contact.cshtml" />
-    <Content Include="Views\Login\Login.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Login\IndexLogin.cshtml" />
+    <Content Include="Views\Home\IndexHome.cshtml" />
+    <Content Include="Views\Kunden\IndexKunden.cshtml" />
+    <Content Include="Views\Waren.cshtml" />
+    <Content Include="Views\Waren\IndexWaren.cshtml" />
+    <Content Include="Views\Statistik.cshtml" />
+    <Content Include="Views\Statistik\IndexStatistik.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
