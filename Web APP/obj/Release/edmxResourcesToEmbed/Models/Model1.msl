@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="datasevenModelStoreContainer" CdmEntityContainer="datasevenEntities1">
+    <EntitySetMapping Name="stamm">
+      <EntityTypeMapping TypeName="datasevenModel.stamm">
+        <MappingFragment StoreEntitySet="stamm">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="brvon" ColumnName="brvon" />
+          <ScalarProperty Name="clvon" ColumnName="clvon" />
+          <ScalarProperty Name="hgvon" ColumnName="hgvon" />
+          <ScalarProperty Name="parent" ColumnName="parent" />
+          <ScalarProperty Name="person" ColumnName="person" />
+          <ScalarProperty Name="anrede" ColumnName="anrede" />
+          <ScalarProperty Name="kennung" ColumnName="kennung" />
+          <ScalarProperty Name="titel" ColumnName="titel" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="vorname" ColumnName="vorname" />
+          <ScalarProperty Name="strasse" ColumnName="strasse" />
+          <ScalarProperty Name="plz" ColumnName="plz" />
+          <ScalarProperty Name="ort" ColumnName="ort" />
+          <ScalarProperty Name="gebdat" ColumnName="gebdat" />
+          <ScalarProperty Name="gesch" ColumnName="gesch" />
+          <ScalarProperty Name="telefon" ColumnName="telefon" />
+          <ScalarProperty Name="telefon1" ColumnName="telefon1" />
+          <ScalarProperty Name="telefon2" ColumnName="telefon2" />
+          <ScalarProperty Name="telefon3" ColumnName="telefon3" />
+          <ScalarProperty Name="telefon4" ColumnName="telefon4" />
+          <ScalarProperty Name="kasse" ColumnName="kasse" />
+          <ScalarProperty Name="kassnum" ColumnName="kassnum" />
+          <ScalarProperty Name="vers_nr" ColumnName="vers_nr" />
+          <ScalarProperty Name="gruppe" ColumnName="gruppe" />
+          <ScalarProperty Name="svwahl" ColumnName="svwahl" />
+          <ScalarProperty Name="sb" ColumnName="sb" />
+          <ScalarProperty Name="dienstgeb" ColumnName="dienstgeb" />
+          <ScalarProperty Name="mname" ColumnName="mname" />
+          <ScalarProperty Name="mvorname" ColumnName="mvorname" />
+          <ScalarProperty Name="mvers_nr" ColumnName="mvers_nr" />
+          <ScalarProperty Name="mgebdat" ColumnName="mgebdat" />
+          <ScalarProperty Name="mgesch" ColumnName="mgesch" />
+          <ScalarProperty Name="erst_ap" ColumnName="erst_ap" />
+          <ScalarProperty Name="werbja" ColumnName="werbja" />
+          <ScalarProperty Name="mailkenn" ColumnName="mailkenn" />
+          <ScalarProperty Name="ersatzdat" ColumnName="ersatzdat" />
+          <ScalarProperty Name="beruf" ColumnName="beruf" />
+          <ScalarProperty Name="hbem" ColumnName="hbem" />
+          <ScalarProperty Name="bbem" ColumnName="bbem" />
+          <ScalarProperty Name="cbem" ColumnName="cbem" />
+          <ScalarProperty Name="transstat" ColumnName="transstat" />
+          <ScalarProperty Name="zugrifftim" ColumnName="zugrifftim" />
+          <ScalarProperty Name="zugriffdat" ColumnName="zugriffdat" />
+          <ScalarProperty Name="anlegdat" ColumnName="anlegdat" />
+          <ScalarProperty Name="anlegzeit" ColumnName="anlegzeit" />
+          <ScalarProperty Name="letztdat" ColumnName="letztdat" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="staat" ColumnName="staat" />
+          <ScalarProperty Name="vknr" ColumnName="vknr" />
+          <ScalarProperty Name="verstat" ColumnName="verstat" />
+          <ScalarProperty Name="staterg" ColumnName="staterg" />
+          <ScalarProperty Name="expdate" ColumnName="expdate" />
+          <ScalarProperty Name="allsum" ColumnName="allsum" />
+          <ScalarProperty Name="sganrede" ColumnName="sganrede" />
+          <ScalarProperty Name="oldkd_nr" ColumnName="oldkd_nr" />
+          <ScalarProperty Name="oldckd_nr" ColumnName="oldckd_nr" />
+          <ScalarProperty Name="oldhkd_nr" ColumnName="oldhkd_nr" />
+          <ScalarProperty Name="kuncard" ColumnName="kuncard" />
+          <ScalarProperty Name="cletztdat" ColumnName="cletztdat" />
+          <ScalarProperty Name="hletztdat" ColumnName="hletztdat" />
+          <ScalarProperty Name="besuchdat" ColumnName="besuchdat" />
+          <ScalarProperty Name="brersatz" ColumnName="brersatz" />
+          <ScalarProperty Name="hgersatz" ColumnName="hgersatz" />
+          <ScalarProperty Name="blz" ColumnName="blz" />
+          <ScalarProperty Name="ktonr" ColumnName="ktonr" />
+          <ScalarProperty Name="custbank" ColumnName="custbank" />
+          <ScalarProperty Name="cat" ColumnName="cat" />
+          <ScalarProperty Name="xbmem" ColumnName="xbmem" />
+          <ScalarProperty Name="xcmem" ColumnName="xcmem" />
+          <ScalarProperty Name="xhmem" ColumnName="xhmem" />
+          <ScalarProperty Name="cspkd_nr" ColumnName="cspkd_nr" />
+          <ScalarProperty Name="sammel" ColumnName="sammel" />
+          <ScalarProperty Name="stfil" ColumnName="stfil" />
+          <ScalarProperty Name="umsjob" ColumnName="umsjob" />
+          <ScalarProperty Name="opkd_nr" ColumnName="opkd_nr" />
+          <ScalarProperty Name="opnr" ColumnName="opnr" />
+          <ScalarProperty Name="name2" ColumnName="name2" />
+          <ScalarProperty Name="strasse2" ColumnName="strasse2" />
+          <ScalarProperty Name="mberuf" ColumnName="mberuf" />
+          <ScalarProperty Name="manrede" ColumnName="manrede" />
+          <ScalarProperty Name="mtitel" ColumnName="mtitel" />
+          <ScalarProperty Name="mdienstgeb" ColumnName="mdienstgeb" />
+          <ScalarProperty Name="mort" ColumnName="mort" />
+          <ScalarProperty Name="mplz" ColumnName="mplz" />
+          <ScalarProperty Name="mstrasse" ColumnName="mstrasse" />
+          <ScalarProperty Name="msgebdat" ColumnName="msgebdat" />
+          <ScalarProperty Name="sgebdat" ColumnName="sgebdat" />
+          <ScalarProperty Name="land" ColumnName="land" />
+          <ScalarProperty Name="sepaseit" ColumnName="sepaseit" />
+          <ScalarProperty Name="indikation" ColumnName="indikation" />
+          <ScalarProperty Name="uidnr" ColumnName="uidnr" />
+          <ScalarProperty Name="hobby" ColumnName="hobby" />
+          <ScalarProperty Name="kontoid" ColumnName="kontoid" />
+          <ScalarProperty Name="abbu" ColumnName="abbu" />
+          <ScalarProperty Name="normtermin" ColumnName="normtermin" />
+          <ScalarProperty Name="ecinhaber" ColumnName="ecinhaber" />
+          <ScalarProperty Name="zuversich" ColumnName="zuversich" />
+          <ScalarProperty Name="ibem" ColumnName="ibem" />
+          <ScalarProperty Name="bemtext" ColumnName="bemtext" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

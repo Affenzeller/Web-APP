@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="datasevenModel.Store" Provider="Npgsql" ProviderManifestToken="9.1.19" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="stamm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="numeric" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="brvon" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="clvon" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="hgvon" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="parent" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="person" Type="varchar" MaxLength="2" />
+          <Property Name="anrede" Type="varchar" MaxLength="10" />
+          <Property Name="kennung" Type="varchar" MaxLength="10" />
+          <Property Name="titel" Type="varchar" MaxLength="16" />
+          <Property Name="name" Type="varchar" MaxLength="70" />
+          <Property Name="vorname" Type="varchar" MaxLength="70" />
+          <Property Name="strasse" Type="varchar" MaxLength="70" />
+          <Property Name="plz" Type="varchar" MaxLength="8" />
+          <Property Name="ort" Type="varchar" MaxLength="70" />
+          <Property Name="gebdat" Type="timestamp" />
+          <Property Name="gesch" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="telefon" Type="varchar" MaxLength="50" />
+          <Property Name="telefon1" Type="varchar" MaxLength="50" />
+          <Property Name="telefon2" Type="varchar" MaxLength="50" />
+          <Property Name="telefon3" Type="varchar" MaxLength="50" />
+          <Property Name="telefon4" Type="varchar" MaxLength="50" />
+          <Property Name="kasse" Type="varchar" MaxLength="50" />
+          <Property Name="kassnum" Type="varchar" MaxLength="50" />
+          <Property Name="vers_nr" Type="varchar" MaxLength="50" />
+          <Property Name="gruppe" Type="varchar" MaxLength="35" />
+          <Property Name="svwahl" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="sb" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="dienstgeb" Type="varchar" MaxLength="30" />
+          <Property Name="mname" Type="varchar" MaxLength="50" />
+          <Property Name="mvorname" Type="varchar" MaxLength="50" />
+          <Property Name="mvers_nr" Type="varchar" MaxLength="50" />
+          <Property Name="mgebdat" Type="timestamp" />
+          <Property Name="mgesch" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="erst_ap" Type="timestamp" />
+          <Property Name="werbja" Type="bool" />
+          <Property Name="mailkenn" Type="varchar" MaxLength="5" />
+          <Property Name="ersatzdat" Type="timestamp" />
+          <Property Name="beruf" Type="varchar" MaxLength="50" />
+          <Property Name="hbem" Type="bytea" />
+          <Property Name="bbem" Type="bytea" />
+          <Property Name="cbem" Type="bytea" />
+          <Property Name="transstat" Type="varchar" MaxLength="1" />
+          <Property Name="zugrifftim" Type="varchar" MaxLength="10" />
+          <Property Name="zugriffdat" Type="timestamp" />
+          <Property Name="anlegdat" Type="timestamp" />
+          <Property Name="anlegzeit" Type="varchar" MaxLength="8" />
+          <Property Name="letztdat" Type="timestamp" />
+          <Property Name="userid" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="staat" Type="varchar" MaxLength="50" />
+          <Property Name="vknr" Type="varchar" MaxLength="50" />
+          <Property Name="verstat" Type="varchar" MaxLength="50" />
+          <Property Name="staterg" Type="varchar" MaxLength="50" />
+          <Property Name="expdate" Type="varchar" MaxLength="50" />
+          <Property Name="allsum" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="sganrede" Type="varchar" MaxLength="70" />
+          <Property Name="oldkd_nr" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="oldckd_nr" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="oldhkd_nr" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="kuncard" Type="varchar" MaxLength="15" />
+          <Property Name="cletztdat" Type="timestamp" />
+          <Property Name="hletztdat" Type="timestamp" />
+          <Property Name="besuchdat" Type="timestamp" />
+          <Property Name="brersatz" Type="timestamp" />
+          <Property Name="hgersatz" Type="timestamp" />
+          <Property Name="blz" Type="varchar" MaxLength="30" />
+          <Property Name="ktonr" Type="varchar" MaxLength="30" />
+          <Property Name="custbank" Type="varchar" MaxLength="50" />
+          <Property Name="cat" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="xbmem" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="xcmem" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="xhmem" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="cspkd_nr" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="sammel" Type="bool" />
+          <Property Name="stfil" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="umsjob" Type="varchar" MaxLength="20" />
+          <Property Name="opkd_nr" Type="numeric" Precision="19" Scale="4" />
+          <Property Name="opnr" Type="varchar" MaxLength="8" />
+          <Property Name="name2" Type="varchar" MaxLength="70" />
+          <Property Name="strasse2" Type="varchar" MaxLength="70" />
+          <Property Name="mberuf" Type="varchar" MaxLength="50" />
+          <Property Name="manrede" Type="varchar" MaxLength="10" />
+          <Property Name="mtitel" Type="varchar" MaxLength="16" />
+          <Property Name="mdienstgeb" Type="varchar" MaxLength="30" />
+          <Property Name="mort" Type="varchar" MaxLength="50" />
+          <Property Name="mplz" Type="varchar" MaxLength="50" />
+          <Property Name="mstrasse" Type="varchar" MaxLength="50" />
+          <Property Name="msgebdat" Type="varchar" MaxLength="10" />
+          <Property Name="sgebdat" Type="varchar" MaxLength="10" />
+          <Property Name="land" Type="varchar" MaxLength="10" />
+          <Property Name="sepaseit" Type="timestamp" />
+          <Property Name="indikation" Type="varchar" MaxLength="100" />
+          <Property Name="uidnr" Type="varchar" MaxLength="50" />
+          <Property Name="hobby" Type="varchar" MaxLength="50" />
+          <Property Name="kontoid" Type="varchar" MaxLength="20" />
+          <Property Name="abbu" Type="bool" />
+          <Property Name="normtermin" Type="varchar" MaxLength="2" />
+          <Property Name="ecinhaber" Type="varchar" MaxLength="60" />
+          <Property Name="zuversich" Type="bool" />
+          <Property Name="ibem" Type="bytea" />
+          <Property Name="bemtext" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="datasevenModelStoreContainer">
+          <EntitySet Name="stamm" EntityType="Self.stamm" Schema="public" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="datasevenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="stamm">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="brvon" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="clvon" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="hgvon" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="parent" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="person" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="anrede" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="kennung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="titel" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="vorname" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="strasse" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="plz" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="ort" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="gebdat" Type="DateTime" Precision="6" />
+          <Property Name="gesch" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="telefon4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kassnum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vers_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gruppe" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="svwahl" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="sb" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="dienstgeb" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="mname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mvorname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mvers_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mgebdat" Type="DateTime" Precision="6" />
+          <Property Name="mgesch" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="erst_ap" Type="DateTime" Precision="6" />
+          <Property Name="werbja" Type="Boolean" />
+          <Property Name="mailkenn" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="ersatzdat" Type="DateTime" Precision="6" />
+          <Property Name="beruf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="bbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="cbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="transstat" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="zugrifftim" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="zugriffdat" Type="DateTime" Precision="6" />
+          <Property Name="anlegdat" Type="DateTime" Precision="6" />
+          <Property Name="anlegzeit" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="letztdat" Type="DateTime" Precision="6" />
+          <Property Name="userid" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="staat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="vknr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="verstat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="staterg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="expdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="allsum" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="sganrede" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="oldkd_nr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="oldckd_nr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="oldhkd_nr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kuncard" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="cletztdat" Type="DateTime" Precision="6" />
+          <Property Name="hletztdat" Type="DateTime" Precision="6" />
+          <Property Name="besuchdat" Type="DateTime" Precision="6" />
+          <Property Name="brersatz" Type="DateTime" Precision="6" />
+          <Property Name="hgersatz" Type="DateTime" Precision="6" />
+          <Property Name="blz" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ktonr" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="custbank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cat" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xbmem" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xcmem" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xhmem" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="cspkd_nr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="sammel" Type="Boolean" />
+          <Property Name="stfil" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="umsjob" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="opkd_nr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="opnr" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="name2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="strasse2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+          <Property Name="mberuf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="manrede" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mtitel" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Name="mdienstgeb" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="mort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mplz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="mstrasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="msgebdat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="sgebdat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="land" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="sepaseit" Type="DateTime" Precision="6" />
+          <Property Name="indikation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="uidnr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hobby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kontoid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="abbu" Type="Boolean" />
+          <Property Name="normtermin" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="ecinhaber" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="zuversich" Type="Boolean" />
+          <Property Name="ibem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+          <Property Name="bemtext" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="datasevenEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="stamm" EntityType="Self.stamm" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="datasevenModelStoreContainer" CdmEntityContainer="datasevenEntities1">
+          <EntitySetMapping Name="stamm">
+            <EntityTypeMapping TypeName="datasevenModel.stamm">
+              <MappingFragment StoreEntitySet="stamm">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="brvon" ColumnName="brvon" />
+                <ScalarProperty Name="clvon" ColumnName="clvon" />
+                <ScalarProperty Name="hgvon" ColumnName="hgvon" />
+                <ScalarProperty Name="parent" ColumnName="parent" />
+                <ScalarProperty Name="person" ColumnName="person" />
+                <ScalarProperty Name="anrede" ColumnName="anrede" />
+                <ScalarProperty Name="kennung" ColumnName="kennung" />
+                <ScalarProperty Name="titel" ColumnName="titel" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="vorname" ColumnName="vorname" />
+                <ScalarProperty Name="strasse" ColumnName="strasse" />
+                <ScalarProperty Name="plz" ColumnName="plz" />
+                <ScalarProperty Name="ort" ColumnName="ort" />
+                <ScalarProperty Name="gebdat" ColumnName="gebdat" />
+                <ScalarProperty Name="gesch" ColumnName="gesch" />
+                <ScalarProperty Name="telefon" ColumnName="telefon" />
+                <ScalarProperty Name="telefon1" ColumnName="telefon1" />
+                <ScalarProperty Name="telefon2" ColumnName="telefon2" />
+                <ScalarProperty Name="telefon3" ColumnName="telefon3" />
+                <ScalarProperty Name="telefon4" ColumnName="telefon4" />
+                <ScalarProperty Name="kasse" ColumnName="kasse" />
+                <ScalarProperty Name="kassnum" ColumnName="kassnum" />
+                <ScalarProperty Name="vers_nr" ColumnName="vers_nr" />
+                <ScalarProperty Name="gruppe" ColumnName="gruppe" />
+                <ScalarProperty Name="svwahl" ColumnName="svwahl" />
+                <ScalarProperty Name="sb" ColumnName="sb" />
+                <ScalarProperty Name="dienstgeb" ColumnName="dienstgeb" />
+                <ScalarProperty Name="mname" ColumnName="mname" />
+                <ScalarProperty Name="mvorname" ColumnName="mvorname" />
+                <ScalarProperty Name="mvers_nr" ColumnName="mvers_nr" />
+                <ScalarProperty Name="mgebdat" ColumnName="mgebdat" />
+                <ScalarProperty Name="mgesch" ColumnName="mgesch" />
+                <ScalarProperty Name="erst_ap" ColumnName="erst_ap" />
+                <ScalarProperty Name="werbja" ColumnName="werbja" />
+                <ScalarProperty Name="mailkenn" ColumnName="mailkenn" />
+                <ScalarProperty Name="ersatzdat" ColumnName="ersatzdat" />
+                <ScalarProperty Name="beruf" ColumnName="beruf" />
+                <ScalarProperty Name="hbem" ColumnName="hbem" />
+                <ScalarProperty Name="bbem" ColumnName="bbem" />
+                <ScalarProperty Name="cbem" ColumnName="cbem" />
+                <ScalarProperty Name="transstat" ColumnName="transstat" />
+                <ScalarProperty Name="zugrifftim" ColumnName="zugrifftim" />
+                <ScalarProperty Name="zugriffdat" ColumnName="zugriffdat" />
+                <ScalarProperty Name="anlegdat" ColumnName="anlegdat" />
+                <ScalarProperty Name="anlegzeit" ColumnName="anlegzeit" />
+                <ScalarProperty Name="letztdat" ColumnName="letztdat" />
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="staat" ColumnName="staat" />
+                <ScalarProperty Name="vknr" ColumnName="vknr" />
+                <ScalarProperty Name="verstat" ColumnName="verstat" />
+                <ScalarProperty Name="staterg" ColumnName="staterg" />
+                <ScalarProperty Name="expdate" ColumnName="expdate" />
+                <ScalarProperty Name="allsum" ColumnName="allsum" />
+                <ScalarProperty Name="sganrede" ColumnName="sganrede" />
+                <ScalarProperty Name="oldkd_nr" ColumnName="oldkd_nr" />
+                <ScalarProperty Name="oldckd_nr" ColumnName="oldckd_nr" />
+                <ScalarProperty Name="oldhkd_nr" ColumnName="oldhkd_nr" />
+                <ScalarProperty Name="kuncard" ColumnName="kuncard" />
+                <ScalarProperty Name="cletztdat" ColumnName="cletztdat" />
+                <ScalarProperty Name="hletztdat" ColumnName="hletztdat" />
+                <ScalarProperty Name="besuchdat" ColumnName="besuchdat" />
+                <ScalarProperty Name="brersatz" ColumnName="brersatz" />
+                <ScalarProperty Name="hgersatz" ColumnName="hgersatz" />
+                <ScalarProperty Name="blz" ColumnName="blz" />
+                <ScalarProperty Name="ktonr" ColumnName="ktonr" />
+                <ScalarProperty Name="custbank" ColumnName="custbank" />
+                <ScalarProperty Name="cat" ColumnName="cat" />
+                <ScalarProperty Name="xbmem" ColumnName="xbmem" />
+                <ScalarProperty Name="xcmem" ColumnName="xcmem" />
+                <ScalarProperty Name="xhmem" ColumnName="xhmem" />
+                <ScalarProperty Name="cspkd_nr" ColumnName="cspkd_nr" />
+                <ScalarProperty Name="sammel" ColumnName="sammel" />
+                <ScalarProperty Name="stfil" ColumnName="stfil" />
+                <ScalarProperty Name="umsjob" ColumnName="umsjob" />
+                <ScalarProperty Name="opkd_nr" ColumnName="opkd_nr" />
+                <ScalarProperty Name="opnr" ColumnName="opnr" />
+                <ScalarProperty Name="name2" ColumnName="name2" />
+                <ScalarProperty Name="strasse2" ColumnName="strasse2" />
+                <ScalarProperty Name="mberuf" ColumnName="mberuf" />
+                <ScalarProperty Name="manrede" ColumnName="manrede" />
+                <ScalarProperty Name="mtitel" ColumnName="mtitel" />
+                <ScalarProperty Name="mdienstgeb" ColumnName="mdienstgeb" />
+                <ScalarProperty Name="mort" ColumnName="mort" />
+                <ScalarProperty Name="mplz" ColumnName="mplz" />
+                <ScalarProperty Name="mstrasse" ColumnName="mstrasse" />
+                <ScalarProperty Name="msgebdat" ColumnName="msgebdat" />
+                <ScalarProperty Name="sgebdat" ColumnName="sgebdat" />
+                <ScalarProperty Name="land" ColumnName="land" />
+                <ScalarProperty Name="sepaseit" ColumnName="sepaseit" />
+                <ScalarProperty Name="indikation" ColumnName="indikation" />
+                <ScalarProperty Name="uidnr" ColumnName="uidnr" />
+                <ScalarProperty Name="hobby" ColumnName="hobby" />
+                <ScalarProperty Name="kontoid" ColumnName="kontoid" />
+                <ScalarProperty Name="abbu" ColumnName="abbu" />
+                <ScalarProperty Name="normtermin" ColumnName="normtermin" />
+                <ScalarProperty Name="ecinhaber" ColumnName="ecinhaber" />
+                <ScalarProperty Name="zuversich" ColumnName="zuversich" />
+                <ScalarProperty Name="ibem" ColumnName="ibem" />
+                <ScalarProperty Name="bemtext" ColumnName="bemtext" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

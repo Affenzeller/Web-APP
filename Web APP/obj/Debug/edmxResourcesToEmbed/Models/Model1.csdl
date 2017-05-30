@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="datasevenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="stamm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="brvon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="clvon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="hgvon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="parent" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="person" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="anrede" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="kennung" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="titel" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="vorname" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="strasse" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="plz" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="ort" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="gebdat" Type="DateTime" Precision="6" />
+    <Property Name="gesch" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="telefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="telefon4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kassnum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vers_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gruppe" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="svwahl" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="sb" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="dienstgeb" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="mname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mvorname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mvers_nr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mgebdat" Type="DateTime" Precision="6" />
+    <Property Name="mgesch" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="erst_ap" Type="DateTime" Precision="6" />
+    <Property Name="werbja" Type="Boolean" />
+    <Property Name="mailkenn" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="ersatzdat" Type="DateTime" Precision="6" />
+    <Property Name="beruf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="bbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="cbem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="transstat" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="zugrifftim" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="zugriffdat" Type="DateTime" Precision="6" />
+    <Property Name="anlegdat" Type="DateTime" Precision="6" />
+    <Property Name="anlegzeit" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="letztdat" Type="DateTime" Precision="6" />
+    <Property Name="userid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="staat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="vknr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="verstat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="staterg" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="expdate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="allsum" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="sganrede" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="oldkd_nr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="oldckd_nr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="oldhkd_nr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="kuncard" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="cletztdat" Type="DateTime" Precision="6" />
+    <Property Name="hletztdat" Type="DateTime" Precision="6" />
+    <Property Name="besuchdat" Type="DateTime" Precision="6" />
+    <Property Name="brersatz" Type="DateTime" Precision="6" />
+    <Property Name="hgersatz" Type="DateTime" Precision="6" />
+    <Property Name="blz" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ktonr" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="custbank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="cat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="xbmem" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="xcmem" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="xhmem" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="cspkd_nr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="sammel" Type="Boolean" />
+    <Property Name="stfil" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="umsjob" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="opkd_nr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="opnr" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="name2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="strasse2" Type="String" MaxLength="70" FixedLength="false" Unicode="true" />
+    <Property Name="mberuf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="manrede" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="mtitel" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="mdienstgeb" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="mort" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mplz" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="mstrasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="msgebdat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sgebdat" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="land" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="sepaseit" Type="DateTime" Precision="6" />
+    <Property Name="indikation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="uidnr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hobby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="kontoid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="abbu" Type="Boolean" />
+    <Property Name="normtermin" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+    <Property Name="ecinhaber" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="zuversich" Type="Boolean" />
+    <Property Name="ibem" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="bemtext" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="datasevenEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="stamm" EntityType="Self.stamm" />
+  </EntityContainer>
+</Schema>

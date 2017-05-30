@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="datasevenModel.Store" Provider="Npgsql" ProviderManifestToken="9.1.19" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="stamm">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="numeric" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="brvon" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="clvon" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="hgvon" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="parent" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="person" Type="varchar" MaxLength="2" />
+    <Property Name="anrede" Type="varchar" MaxLength="10" />
+    <Property Name="kennung" Type="varchar" MaxLength="10" />
+    <Property Name="titel" Type="varchar" MaxLength="16" />
+    <Property Name="name" Type="varchar" MaxLength="70" />
+    <Property Name="vorname" Type="varchar" MaxLength="70" />
+    <Property Name="strasse" Type="varchar" MaxLength="70" />
+    <Property Name="plz" Type="varchar" MaxLength="8" />
+    <Property Name="ort" Type="varchar" MaxLength="70" />
+    <Property Name="gebdat" Type="timestamp" />
+    <Property Name="gesch" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="telefon" Type="varchar" MaxLength="50" />
+    <Property Name="telefon1" Type="varchar" MaxLength="50" />
+    <Property Name="telefon2" Type="varchar" MaxLength="50" />
+    <Property Name="telefon3" Type="varchar" MaxLength="50" />
+    <Property Name="telefon4" Type="varchar" MaxLength="50" />
+    <Property Name="kasse" Type="varchar" MaxLength="50" />
+    <Property Name="kassnum" Type="varchar" MaxLength="50" />
+    <Property Name="vers_nr" Type="varchar" MaxLength="50" />
+    <Property Name="gruppe" Type="varchar" MaxLength="35" />
+    <Property Name="svwahl" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="sb" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="dienstgeb" Type="varchar" MaxLength="30" />
+    <Property Name="mname" Type="varchar" MaxLength="50" />
+    <Property Name="mvorname" Type="varchar" MaxLength="50" />
+    <Property Name="mvers_nr" Type="varchar" MaxLength="50" />
+    <Property Name="mgebdat" Type="timestamp" />
+    <Property Name="mgesch" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="erst_ap" Type="timestamp" />
+    <Property Name="werbja" Type="bool" />
+    <Property Name="mailkenn" Type="varchar" MaxLength="5" />
+    <Property Name="ersatzdat" Type="timestamp" />
+    <Property Name="beruf" Type="varchar" MaxLength="50" />
+    <Property Name="hbem" Type="bytea" />
+    <Property Name="bbem" Type="bytea" />
+    <Property Name="cbem" Type="bytea" />
+    <Property Name="transstat" Type="varchar" MaxLength="1" />
+    <Property Name="zugrifftim" Type="varchar" MaxLength="10" />
+    <Property Name="zugriffdat" Type="timestamp" />
+    <Property Name="anlegdat" Type="timestamp" />
+    <Property Name="anlegzeit" Type="varchar" MaxLength="8" />
+    <Property Name="letztdat" Type="timestamp" />
+    <Property Name="userid" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="staat" Type="varchar" MaxLength="50" />
+    <Property Name="vknr" Type="varchar" MaxLength="50" />
+    <Property Name="verstat" Type="varchar" MaxLength="50" />
+    <Property Name="staterg" Type="varchar" MaxLength="50" />
+    <Property Name="expdate" Type="varchar" MaxLength="50" />
+    <Property Name="allsum" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="sganrede" Type="varchar" MaxLength="70" />
+    <Property Name="oldkd_nr" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="oldckd_nr" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="oldhkd_nr" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="kuncard" Type="varchar" MaxLength="15" />
+    <Property Name="cletztdat" Type="timestamp" />
+    <Property Name="hletztdat" Type="timestamp" />
+    <Property Name="besuchdat" Type="timestamp" />
+    <Property Name="brersatz" Type="timestamp" />
+    <Property Name="hgersatz" Type="timestamp" />
+    <Property Name="blz" Type="varchar" MaxLength="30" />
+    <Property Name="ktonr" Type="varchar" MaxLength="30" />
+    <Property Name="custbank" Type="varchar" MaxLength="50" />
+    <Property Name="cat" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="xbmem" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="xcmem" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="xhmem" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="cspkd_nr" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="sammel" Type="bool" />
+    <Property Name="stfil" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="umsjob" Type="varchar" MaxLength="20" />
+    <Property Name="opkd_nr" Type="numeric" Precision="19" Scale="4" />
+    <Property Name="opnr" Type="varchar" MaxLength="8" />
+    <Property Name="name2" Type="varchar" MaxLength="70" />
+    <Property Name="strasse2" Type="varchar" MaxLength="70" />
+    <Property Name="mberuf" Type="varchar" MaxLength="50" />
+    <Property Name="manrede" Type="varchar" MaxLength="10" />
+    <Property Name="mtitel" Type="varchar" MaxLength="16" />
+    <Property Name="mdienstgeb" Type="varchar" MaxLength="30" />
+    <Property Name="mort" Type="varchar" MaxLength="50" />
+    <Property Name="mplz" Type="varchar" MaxLength="50" />
+    <Property Name="mstrasse" Type="varchar" MaxLength="50" />
+    <Property Name="msgebdat" Type="varchar" MaxLength="10" />
+    <Property Name="sgebdat" Type="varchar" MaxLength="10" />
+    <Property Name="land" Type="varchar" MaxLength="10" />
+    <Property Name="sepaseit" Type="timestamp" />
+    <Property Name="indikation" Type="varchar" MaxLength="100" />
+    <Property Name="uidnr" Type="varchar" MaxLength="50" />
+    <Property Name="hobby" Type="varchar" MaxLength="50" />
+    <Property Name="kontoid" Type="varchar" MaxLength="20" />
+    <Property Name="abbu" Type="bool" />
+    <Property Name="normtermin" Type="varchar" MaxLength="2" />
+    <Property Name="ecinhaber" Type="varchar" MaxLength="60" />
+    <Property Name="zuversich" Type="bool" />
+    <Property Name="ibem" Type="bytea" />
+    <Property Name="bemtext" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="datasevenModelStoreContainer">
+    <EntitySet Name="stamm" EntityType="Self.stamm" Schema="public" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
