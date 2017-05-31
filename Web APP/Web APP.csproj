@@ -307,7 +307,7 @@
     <Content Include="Views\Waren\IndexWaren.cshtml" />
     <Content Include="Views\Statistik.cshtml" />
     <Content Include="Views\Statistik\IndexStatistik.cshtml" />
-    <Content Include="Views\Test\TestView.cshtml" />
+    <Content Include="Views\Test\IndexTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

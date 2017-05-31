@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="id" Type="Int32" Nullable="false" />
     <Property Name="brvon" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="clvon" Type="Decimal" Precision="19" Scale="4" />
     <Property Name="hgvon" Type="Decimal" Precision="19" Scale="4" />

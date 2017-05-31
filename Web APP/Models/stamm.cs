@@ -14,7 +14,7 @@ namespace Web_APP.Models
     
     public partial class stamm
     {
-        public decimal id { get; set; }
+        public int id { get; set; }
         public Nullable<decimal> brvon { get; set; }
         public Nullable<decimal> clvon { get; set; }
         public Nullable<decimal> hgvon { get; set; }
@@ -114,12 +114,5 @@ namespace Web_APP.Models
         public Nullable<bool> zuversich { get; set; }
         public byte[] ibem { get; set; }
         public string bemtext { get; set; }
-    }
-}
-
-namespace Web_APP.Models.Model1.edmx.Model1.tt
-{
-    class Model1Entities
-    {
     }
 }

@@ -4,23 +4,34 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
-using Web_APP.Models.Model1.edmx.Model1.tt;
 using Web_APP.Models;
 
 namespace Web_APP.Controllers
 {
     public class TestController : Controller
     {
-        //private Model1Entities db = new Model1Entities();
-
+        private TestModel db = new TestModel();
+        
 
         // GET: Test
-        public ActionResult Index()
+        public ActionResult IndexTest()
         {
-            //TestModel TM = new TestModel();
+            stamm ST = new stamm();
 
- 
-            return View();
+            //tblMitarbeiter ma = db.tblMitarbeiter.Find(id);
+            //stamm ST = db.stamm
+            //MitarbeiterModel b = new MitarbeiterModel();
+            // b.MAVorname = ma.MAVorname;
+            //TM.vorname = stamm.
+            // ViewBag.IDMitarbeiter = new SelectList(db.tblLogin, "IDLogin", "Email", ma.IDMitarbeiter);
+            //ViewBag.idStamm = new SelectList(, ST.vorname, ST.name)
+
+            ST.id = 1;
+            ST.indikation = "dsd";
+            ST.vorname = "Test VN";
+            ST.name= "Test NN";
+
+            return View(ST);
         }
     }
 }

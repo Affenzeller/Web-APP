@@ -19,6 +19,9 @@ namespace Web_APP.Models
         {
             get; set;
         }
-
+        public List<stamm> stammliste
+        {
+            get; set;
+        }
     }
 }
