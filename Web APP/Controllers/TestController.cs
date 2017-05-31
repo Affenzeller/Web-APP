@@ -17,22 +17,10 @@ namespace Web_APP.Controllers
         // GET: Test
         public ActionResult Index()
         {
-            TestModel TM = new TestModel();
+            //TestModel TM = new TestModel();
 
-            Model1Entities db = new Model1Entities();
-
-            List<Model1Entities> meList = new List<Model1Entities>();
-
-            datasevenEntities1 dse = new datasevenEntities1();
-
-            dse.stamm.Where(x => x.id == 100001).ToList();
-
-       
-
-
-
-
-            return View(dse.stamm.Where(x => x.id == 100001).ToList());
+ 
+            return View();
         }
     }
 }
