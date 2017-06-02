@@ -2,6 +2,80 @@
 @{
     ViewBag.Title = "Statistik";
 }
+<style>
+    .GroßeLeere {
+        width: 100%;
+        height: 100%;
+        background-color: whitesmoke;
+    }
 
-<h2>Statistik</h2>
+.KleinesAuswahlFeld{
+    background-color:lightgray;
+    width:100%;
+    height:500px;
+    padding:20%;
 
+}
+.AuswahlFeld{
+    border-style:solid;
+    border-color:black;
+    border-width:2px;
+    margin:0;
+    padding:0;
+}
+
+
+</style>
+
+<div class="container">
+
+    <div class="row">
+   <!---->
+        <div class="col-md-12 AuswahlFeld"> <a href="@Url.Action("IndexHome", "Home")">Zurück zum Menü</a>
+    <h4>Statistik</h4>
+</div>
+    <!--kleines Feld A-->
+        <div class="col-lg-4 AuswahlFeld">
+            <div style="width:%">
+                <div class="row; KleinesAuswahlFeld">
+                    <div class="">
+                        <!-- -->
+                        <div class="col-md-12;">
+                                <div>PC-KASSA</div>
+                            <a data-toggle="collapse" href="#collapse1">Standard Filter</a>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--kleines Feld E-->
+
+    <!--Großes Feld A-->
+        <div class="col-lg-8">
+            
+                    <div class="row">
+                        <div class="col-md-12 AuswahlFeld">
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <!--Colappse Anfang-->
+                                <div class="panel-heading">
+                                    <div>
+                                        <div class="GroßeLeere">
+                                            Große Leere
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--Colappse Ende-->
+                        </div>
+                    </div>
+           
+        </div>
+    <!--Großes Feld E-->
+
+    <!-- -->
+
+
+
+            </div>
+        </div>
+  
