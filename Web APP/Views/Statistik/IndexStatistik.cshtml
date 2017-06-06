@@ -9,73 +9,159 @@
         background-color: whitesmoke;
     }
 
-.KleinesAuswahlFeld{
-    background-color:lightgray;
-    width:100%;
-    height:500px;
-    padding:20%;
+    .KleinesAuswahlFeld {
+        background-color: lightgray;
+        width: 100%;
+        height: 500px;
+        padding: 20%;
+    }
 
-}
-.AuswahlFeld{
-    border-style:solid;
-    border-color:black;
-    border-width:2px;
-    margin:0;
-    padding:0;
-}
+    .AuswahlFeld {
+        border-style: solid;
+        border-color: black;
+        border-width: 2px;
+        margin: 0;
+        padding: 0;
+    }
 
+    .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: ghostwhite;
+        background-color: ghostwhite;
+        overflow-y: hidden;
+        transition: 0.5s;
+    }
 
+    .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .overlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: red;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .StrichGrau {
+        border-bottom: solid 1px;
+        border-color: lightgray;
+    }
 </style>
+
+<div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="background-color:azure">STATISTIK MIT VERLEICH FÜR DIE ZEIT VOM @DateTime.Today BIS @DateTime.Today <br /> SUMME ZEITRAUM: ???? VERGLEICH: ???? ABWEICHUNG: 0.00%</div>
+            </div>
+            <div class="overlay-content StrichGrau">
+               
+                    <div class="col-sm-2">Zeitraum</div>
+                    <div class="col-sm-2">@DateTime.Today</div>
+                    <div class="col-sm-1">Anzahl</div>
+                    <div class="col-sm-2">Bezeichnung</div>
+                    <div class="col-sm-2">0.00</div>
+                    <div class="col-sm-1">100%</div>
+                    <div class="col-sm-2">0.00</div>
+                
+               <br />
+           
+                    <div class="col-sm-2">Vergleich</div>
+                    <div class="col-sm-2">.</div>
+                    <div class="col-sm-1">Anzahl</div>
+                    <div class="col-sm-2">.</div>
+                    <div class="col-sm-2">0.00</div>
+                    <div class="col-sm-1">100%</div>
+                    <div class="col-sm-2">0.00</div>
+               
+            </div>
+           
+        </div>
+    </div>
+</div>
+
 
 <div class="container">
 
     <div class="row">
-   <!---->
-        <div class="col-md-12 AuswahlFeld"> <a href="@Url.Action("IndexHome", "Home")">Zurück zum Menü</a>
-    <h4>Statistik</h4>
-</div>
-    <!--kleines Feld A-->
+        <!---->
+        <div class="col-md-12 AuswahlFeld">
+            <a href="@Url.Action("IndexHome", "Home")">Zurück zum Menü</a>
+            <h4>Statistik</h4>
+        </div>
+        <!--kleines Feld A-->
         <div class="col-lg-4 AuswahlFeld">
-            <div style="width:%">
-                <div class="row; KleinesAuswahlFeld">
-                    <div class="">
-                        <!-- -->
-                        <div class="col-md-12;">
-                                <div>PC-KASSA</div>
-                            <a data-toggle="collapse" href="#collapse1">Standard Filter</a>
-                                
-                        </div>
+            <div class="row; KleinesAuswahlFeld">
+                <div class="">
+                    <!-- -->
+                    <div class="col-md-12;">
+                        <div>PC-KASSA</div>
+                        <a data-toggle="collapse" href="#collapse1">Standard Filter</a>
+
                     </div>
                 </div>
             </div>
         </div>
         <!--kleines Feld E-->
+        <!--Großes Feld A-->
+        <div class="col-lg-8 AuswahlFeld">
 
-    <!--Großes Feld A-->
-        <div class="col-lg-8">
-            
-                    <div class="row">
-                        <div class="col-md-12 AuswahlFeld">
-                            <div id="collapse1" class="panel-collapse collapse">
-                                <!--Colappse Anfang-->
-                                <div class="panel-heading">
-                                    <div>
-                                        <div class="GroßeLeere">
-                                            Große Leere
-                                        </div>
-                                    </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <!--Colappse Anfang-->
+                        <div class="panel">
+                            <div>
+
+                                <div class="col-md-2 GroßeLeere">
+
+                                    <h3>VORAUSWAHL</h3>
+                                    <div>Filiale</div>
+                                    <div>Gruppen</div>
+                                    <div>POS</div>
+                                    <div>Vergleich</div>
+                                    <h3>Zeitraum</h3>
+                                    <div>Periode</div>
+                                    <div>Von @DateTime.Now</div>
+                                    <div>Bis @DateTime.Today</div>
+                                    <span style="font-size:30px;cursor:zoom-in" onclick="openNav()">&#9776; Suchen</span>
                                 </div>
-                            </div><!--Colappse Ende-->
+                           
+                            </div>
                         </div>
-                    </div>
-           
-        </div>
-    <!--Großes Feld E-->
-
-    <!-- -->
-
-
-
+                    </div><!--Colappse Ende-->
+                </div>
             </div>
+
         </div>
-  
+        <!--Großes Feld E-->
+        <!-- -->
+
+
+
+    </div>
+</div>
+<script>
+
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+    }
+
+</script>
