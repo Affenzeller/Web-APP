@@ -1,4 +1,14 @@
-﻿
+﻿<style>
+    .greyField{
+        width:100%;
+        height:50%;
+        background-color:lightgrey;
+        color:lightgray;
+    }
+
+
+
+</style>
 @{
     ViewBag.Title = "Kunden";
 }
@@ -9,49 +19,308 @@
 <div class="container">
     <div class="row">
 
-        <!--Erste Auswählbox ANFANG-->
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-2 col-lg-2">
-                        <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#KA1">Test Kunde 1</button>
-                        
+        <!--Kunde1 -->    
+        <div class="form-group"style="margin:2px;">
+            <input type="text" class="form-control" placeholder="Suchen nach Namen" id="usr">
+        </div>
+        <br />
+        <div class="col-md-12">
+            <div class="col-md-4">
+        <a data-toggle="collapse" href="#collapse1">Kunde1 Button</a> 
+    </div>
+    <div class="col-md-4">
+        <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-heading">
+            <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+            Kunde1 Name 
+            </div>
+            <div class="panel-body">
+                <table class="table-bordered">
+                    <tr>
+                        <td>Adresse:</td>
+                        <td>Musterstraße 44</td>
+                    </tr>
+                    <tr>
+                        <td>Geburtstag:</td>
+                        <td>1.1.1990</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon:</td>
+                        <td>07268/1234</td>
+                    </tr>
+                    <tr>
+                        <td>Mobil:</td>
+                        <td>0664/1234567</td>
+                    </tr>
+                    <tr>
+                        <td>Arbeit:</td>
+                        <td>Optiker</td>
+                    </tr>
+                    <tr>
+                        <td>Fax:</td>
+                        <td>07268/1234-56</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>office@iom.at</td>
+                    </tr>
+                    <tr>
+                        <td>Kasse:</td>
+                        <td>MusterKrankenasse</td>
+                    </tr>
+                    <tr>
+                        <td>Memo:</td>
+                        <td>Ende der Aufzählung</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <a data-toggle="collapse" href="#collapse2">Auftrag1 Button</a>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-heading">Auftrag1 Übersicht</div>
+            <div class="panel-body">
+                <table class="table-bordered">
+                    <tr class="greyField">
+                        <td >Bla</td>
+                        <td>Blub</td>
+                    </tr>
+                    <tr>
+                        <td>Auftrags Datum:</td>
+                        <td>1.1.1990</td>
+                    </tr>
+                    <tr class="greyField">
+                        <td >Bla</td>
+                        <td>Blub</td>
+                    </tr>
+                    <tr>
+                        <td>Auftrags Fassung:</td>
+                        <td>MusterFassung</td>
+                    </tr>
+                    <tr>
+                        <td>Auftrags Glas R:</td>
+                        <td>MusterGlasRechts</td>
+                    </tr>
+                    <tr>
+                        <td>Auftrags Glas L:</td>
+                        <td>MusterGlasLinks</td>
+                    </tr>
+                    <tr class="greyField">
+                        <td >Bla</td>
+                        <td>Blub</td>
+                    </tr>
+                    <tr>
+                        <td>Frame1:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Glasses1:</td>
+                        <td>103.00 // 103.00</td>
+                    </tr>
+                    <tr>
+                        <td>Frame2:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Auftrags Datum:</td>
+                        <td>1.1.1990</td>
+                    </tr>
+                    <tr>
+                        <td>Glasses2:</td>
+                        <td>0.00 // 0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Arbeit:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Handel:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Sonstiges:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Kassa:</td>
+                        <td>0.00 // 0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Nachlass:</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Summe:</td>
+                        <td>206.00</td>
+                    </tr>
+                    <tr>
+                        <td>Anzahlung:</td>
+                        <td>0.00</td>
+                    </tr>
+                </table>
 
 
-                            <!--Zweite Auswählbox ANFANG-->
-                         
-                            <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5">
-                                <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#KÜ1">Kunden Übersicht</button>
-                                <div id="KÜ1" class="collapse">
-
-                                    <!--Dritte Auswählbox ANFANG-->
-                                    @*<div class="container">
-                                    <div class="row">*@
-                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-                                        <button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#AÜ1">Auftrags Übersicht</button>
-                                        
-                                    </div>
-                                    @*</div>
-                                    </div>*@
-                                    <!--Dritte Auswählbox ENDE-->
-
-                                </div>
-                            </div>
-                          
-                            <!--Zweite Auswählbox ENDE-->
-
-
-
-                        <div id="KA1" class="collapse col-xs-12 col-sm-8 col-md-5 col-lg-5"></div>
-                        <div id="AÜ1" class="collapse col-xs-12 col-sm-8 col-md-5 col-lg-5">Test 1</div>
-
-                        </div>
+            </div>
+            <div class="panel-footer"></div>
+        </div>
+    </div>
+            </div>
+            <!--Kunde1 Ende-->
+            
+        <!--Kunde2 -->
+        <br />
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <a data-toggle="collapse" href="#collapse4">Kunde1 Button</a>
+            </div>
+            <div class="col-md-4">
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-heading">
+                        <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+                        Kunde1 Name
+                    </div>
+                    <div class="panel-body">
+                        <table class="table-bordered">
+                            <tr>
+                                <td>Adresse:</td>
+                                <td>Musterstraße 44</td>
+                            </tr>
+                            <tr>
+                                <td>Geburtstag:</td>
+                                <td>1.1.1990</td>
+                            </tr>
+                            <tr>
+                                <td>Telefon:</td>
+                                <td>07268/1234</td>
+                            </tr>
+                            <tr>
+                                <td>Mobil:</td>
+                                <td>0664/1234567</td>
+                            </tr>
+                            <tr>
+                                <td>Arbeit:</td>
+                                <td>Optiker</td>
+                            </tr>
+                            <tr>
+                                <td>Fax:</td>
+                                <td>07268/1234-56</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>office@iom.at</td>
+                            </tr>
+                            <tr>
+                                <td>Kasse:</td>
+                                <td>MusterKrankenasse</td>
+                            </tr>
+                            <tr>
+                                <td>Memo:</td>
+                                <td>Ende der Aufzählung</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <a data-toggle="collapse" href="#collapse5">Auftrag1 Button</a>
                     </div>
 
-                
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-heading">Auftrag1 Übersicht</div>
+                    <div class="panel-body">
+                        <table class="table-bordered">
+                            <tr class="greyField">
+                                <td>Bla</td>
+                                <td>Blub</td>
+                            </tr>
+                            <tr>
+                                <td>Auftrags Datum:</td>
+                                <td>1.1.1990</td>
+                            </tr>
+                            <tr class="greyField">
+                                <td>Bla</td>
+                                <td>Blub</td>
+                            </tr>
+                            <tr>
+                                <td>Auftrags Fassung:</td>
+                                <td>MusterFassung</td>
+                            </tr>
+                            <tr>
+                                <td>Auftrags Glas R:</td>
+                                <td>MusterGlasRechts</td>
+                            </tr>
+                            <tr>
+                                <td>Auftrags Glas L:</td>
+                                <td>MusterGlasLinks</td>
+                            </tr>
+                            <tr class="greyField">
+                                <td>Bla</td>
+                                <td>Blub</td>
+                            </tr>
+                            <tr>
+                                <td>Frame1:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Glasses1:</td>
+                                <td>103.00 // 103.00</td>
+                            </tr>
+                            <tr>
+                                <td>Frame2:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Auftrags Datum:</td>
+                                <td>1.1.1990</td>
+                            </tr>
+                            <tr>
+                                <td>Glasses2:</td>
+                                <td>0.00 // 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Arbeit:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Handel:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Sonstiges:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Kassa:</td>
+                                <td>0.00 // 0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Nachlass:</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>Summe:</td>
+                                <td>206.00</td>
+                            </tr>
+                            <tr>
+                                <td>Anzahlung:</td>
+                                <td>0.00</td>
+                            </tr>
+                        </table>
 
-                </div>
+
+                    </div>
+                    <div class="panel-footer"></div>
                 </div>
             </div>
-            </div>
+        </div>
+        <!--Kunde2 Ende-->
+            
+                   
+    </div>
+</div>
 <!--großer Container ENDE-->
