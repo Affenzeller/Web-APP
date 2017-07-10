@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="numeric" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="id" Type="int8" Nullable="false" />
     <Property Name="brvon" Type="numeric" Precision="19" Scale="4" />
     <Property Name="clvon" Type="numeric" Precision="19" Scale="4" />
     <Property Name="hgvon" Type="numeric" Precision="19" Scale="4" />
@@ -13,8 +13,8 @@
     <Property Name="anrede" Type="varchar" MaxLength="10" />
     <Property Name="kennung" Type="varchar" MaxLength="10" />
     <Property Name="titel" Type="varchar" MaxLength="16" />
-    <Property Name="name" Type="varchar" MaxLength="70" />
-    <Property Name="vorname" Type="varchar" MaxLength="70" />
+    <Property Name="name" Type="text" />
+    <Property Name="vorname" Type="text" />
     <Property Name="strasse" Type="varchar" MaxLength="70" />
     <Property Name="plz" Type="varchar" MaxLength="8" />
     <Property Name="ort" Type="varchar" MaxLength="70" />

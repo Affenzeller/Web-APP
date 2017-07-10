@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Home Page";
 }
-<style>
+@*<style>
     .zentrierung{
         margin:auto;
         width:60%;
@@ -12,92 +12,44 @@
         margin:auto;
         width:68%;
     }
+</style>*@
 
-
-
-
-</style>
 <!--LoginController LoginView --> 
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-12 col-xs-12 zentrierung"> 
-            <!--Logo-->
-            <img src="~/fonts/AuftrLogo.bmp" alt="IOMLogo" > 
-        </div>
-        <form class="form-horizontal">
-            <div class="col-sm-12 col-xs-12 zentrierung">
-                <!--Benutzername-->
-                <div class="form-group">
-                    <label for="usr">Benutzername:</label>
-                    <input type = "text" class="form-control" id="Benutzername">
-                </div>
-            </div>
-            <div class="col-sm-12 col-xs-12 zentrierung">
-                <!--Passwort-->
-                <div class="form-group">
-                    <label for="pwd">Passwort:</label>
-                    <input type = "password" class="form-control" id="passwort">
-                </div>
-            </div>
-            <div class="col-sm-12 col-xs-12 zentrierungButton">
-                <!--Button Login-->
+        <div class="">
+            <div class="col-sm-12 col-xs-12 Zentrierung">
+                <!--Logo-->
                 <div class="">
-                    <a href="@Url.Action("IndexHome", "Home")">
-                        <input type="button" class="btn btn-primary btn-lg" value="Login" />
-                    </a>
+                    <img src="~/fonts/AuftrLogo.bmp" alt="IOMLogo">
                 </div>
-                
             </div>
-        </form>
+            <form>
+                <div class="col-sm-12 col-xs-12 Zentrierung">
+                    <!--Benutzername-->
+                    <div class="form-group ">
+                        <label for="usr">Benutzername:</label>
+                        <input type="text" class="form-control" id="Benutzername">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 Zentrierung">
+                    <!--Passwort-->
+                    <div class="form-group ">
+                        <label for="pwd">Passwort:</label>
+                        <input type="password" class="form-control " id="passwort">
+                    </div>
+                </div>
+                <div class="col-sm-12 col-xs-12 zentrierungButton">
+                    <!--Button Login-->
+                    <div class="">
+                        <a href="@Url.Action("IndexHome", "Home")">
+                            <input type="button" class="btn btn-primary btn-lg zentrierungButton" value="Login" />
+                        </a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
-
-
-
-
-
-
-@*<div>
-    <div class="col-lg-6">
-        <input type="submit" value="Login" class="btn btn-primary btn-lg" />
-    </div>
-</div>*@
-
-
-
-
-
-
-
-
-
-
-@*<div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-    </div>*@

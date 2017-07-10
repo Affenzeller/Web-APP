@@ -1,24 +1,92 @@
-﻿@model Web_APP.Models.stamm
-@{
-    ViewBag.Title = "Index";
-}
-
-
-<h2>Index</h2>
+﻿@using Web_APP.Models
+@model TestModel
+   
 @*@{
-    var zähler = 0;*@
-
-
-
-@*@foreach (var item in Model.id)
-{
+        ViewBag.Title = "IndexTest";
+    }*@
 
 
 
 
 
-}
-    zähler = 0;
-}*@
-@Html.DisplayFor(modelItem => Model.vorname)
-@Html.DisplayFor(modelItem => Model.id)
+@*foreach nimm die var item aus dem Model (tm) und zwar genau die Stammliste*@
+<div class="container">
+    <div class="row">
+                @{
+                    int zähler = 0;
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <td class="col-lg-2"><b>Kunden ID</b></td>
+                                <td class="col-lg-2"><b>Kunden Vorname</b></td>
+                                <td class="col-lg-2"><b>Kunden Nachname</b></td>
+                                <td class="col-lg-6"></td>
+                            </tr>
+                        </thead>
+                    </table>
+                    foreach (var item in Model.Stammliste)
+                    {
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td class="col-lg-2">
+                                        @*Und jetzt zeige an vom Model das Item mit der bezeichnung id*@
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td class="col-lg-2">
+                                        @Html.DisplayFor(modelItem => item.Vorname)
+                                    </td>
+                                    <td class="col-lg-2">
+                                        @Html.DisplayFor(modelItem => item.Name)
+                                    </td>
+                                    <td class="col-lg-8"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <a data-toggle="collapse" href="#collapse_@Html.DisplayFor(modelItem => item.Id)">
+                            <div id="item1" class="zentrierungButton">
+                                @Html.DisplayFor(modelItem => item.Id)
+                            </div>
+                            <div id="item1" class="zentrierungButton">
+                                @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
+                            </div>
+                        </a>
+                        <div id="collapse_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse ">
+                            <div class="panel-heading">
+                                <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+                                <table class="table">
+                                    <tbody>
+                                        <tr>
+                                            <td class="col-lg-2">
+                                                @*Und jetzt zeige an vom Model das Item mit der bezeichnung id*@
+                                                @Html.DisplayFor(modelItem => item.Id)
+                                            </td>
+                                            <td class="col-lg-2">
+                                                @Html.DisplayFor(modelItem => item.Vorname)
+                                            </td>
+                                            <td class="col-lg-2">
+                                                @Html.DisplayFor(modelItem => item.Name)
+                                            </td>
+                                            <td class="col-lg-8"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                </div>
+
+
+                            zähler++;
+                            if (zähler > 99)
+                            {
+                            <div> Es wurden @zähler Datensätze ausgegeben</div>
+                            break;
+                            }
+                            }
+                            }
+
+       @* @Html.ActionLink("Load next 25 items", "Questions", "Controller", new { page = TestModel.PagingInfo.CurrentPage + 1 }))*@
+</div> <!--Row Ende-->
+        </div> <!--Container Ende-->
+
+       

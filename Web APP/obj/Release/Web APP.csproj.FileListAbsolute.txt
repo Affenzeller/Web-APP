@@ -1,12 +1,3 @@
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\VBCSCompiler.exe
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\ApplicationInsights.config
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\csc.exe
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\csc.exe.config
@@ -14,16 +5,25 @@ C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\rosly
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\csi.exe
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\csi.rsp
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.AppContext.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.Collections.Immutable.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\vbc.exe
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\vbc.exe.config
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\vbc.rsp
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\VBCSCompiler.exe
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Web APP.dll.config
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Web APP.dll
@@ -53,7 +53,6 @@ C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Micro
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Newtonsoft.Json.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Npgsql.dll
-C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Remotion.Linq.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\System.Collections.Immutable.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\System.Diagnostics.DiagnosticSource.dll
@@ -104,6 +103,8 @@ C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Micro
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Microsoft.AI.ServerTelemetryChannel.xml
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Microsoft.AI.WindowsServer.xml
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\Microsoft.AI.Web.xml
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\EntityFramework.resources.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\EntityFramework.SqlServer.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.Helpers.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.Mvc.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.Optimization.resources.dll
@@ -111,5 +112,6 @@ C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\Sy
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.WebPages.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.WebPages.Deployment.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.WebPages.Razor.resources.dll
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Release\Web APP.csprojResolveAssemblyReference.cache
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Release\Web APP.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Release\Web APP.pdb

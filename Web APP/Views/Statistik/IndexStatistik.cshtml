@@ -1,8 +1,9 @@
-﻿
+﻿@model Web_APP.Models.StatistikModel
+
 @{
     ViewBag.Title = "Statistik";
 }
-<style>
+@*<style>
     .GroßeLeere {
         width: 100%;
         height: 100%;
@@ -58,7 +59,7 @@
         border-bottom: solid 1px;
         border-color: lightgray;
     }
-</style>
+</style>*@
 
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -98,9 +99,11 @@
 
     <div class="row">
         <!---->
-        <div class="col-md-12 AuswahlFeld">
-            <a href="@Url.Action("IndexHome", "Home")">Zurück zum Menü</a>
-            <h4>Statistik</h4>
+        <div class="col-md-12 AuswahlFeld" style="text-align:center">
+            <a href="@Url.Action("IndexHome", "Home")">
+                <input type="button" class="btn btn-primary btn-lg zentrierungButton" style="margin:5px;" value="Zurück zum Menü" />
+            </a>
+            <h2>Statistik</h2>
         </div>
         <!--kleines Feld A-->
         <div class="col-lg-4 AuswahlFeld">
@@ -129,15 +132,70 @@
                                 <div class="col-md-2 GroßeLeere">
 
                                     <h3>VORAUSWAHL</h3>
-                                    <div>Filiale</div>
-                                    <div>Gruppen</div>
-                                    <div>POS</div>
-                                    <div>Vergleich</div>
-                                    <h3>Zeitraum</h3>
-                                    <div>Periode</div>
-                                    <div>Von @DateTime.Now</div>
-                                    <div>Bis @DateTime.Today</div>
-                                    <span style="font-size:30px;cursor:zoom-in" onclick="openNav()">&#9776; Suchen</span>
+                                    <!--Null Reference-->
+                                   @*Filialen*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Filiale1, "Filiale:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div>@Html.DropDownList("FilialenOptionen", Model.FilialenOptionen, htmlAttributes: new { @class = "form-control" })</div>
+                                            @Html.ValidationMessageFor(model => model.Filiale1, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*Gruppen*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Gruppe1, "Gruppe:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div>@Html.DropDownList("FilialenOptionen", Model.FilialenOptionen, htmlAttributes: new { @class = "form-control" })</div>
+                                            @Html.ValidationMessageFor(model => model.Gruppe1, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*POS*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.POS1, "POS:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div>@Html.DropDownList("FilialenOptionen", Model.FilialenOptionen, htmlAttributes: new { @class = "form-control" })</div>
+                                            @Html.ValidationMessageFor(model => model.POS1, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*Vergleich*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Vergleich1, "Gruppe:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div>@Html.DropDownList("Vergleich:", Model.FilialenOptionen, htmlAttributes: new { @class = "form-control" })</div>
+                                            @Html.ValidationMessageFor(model => model.Vergleich1, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*Perioden*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Periode1, "Periode:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            <div>@Html.DropDownList("Periode:", Model.FilialenOptionen, htmlAttributes: new { @class = "form-control" })</div>
+                                            @Html.ValidationMessageFor(model => model.Periode1, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*Von*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Von, "Von:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Von, new { htmlAttributes = new { @class = "form-control validationMSG" } })
+                                            @Html.ValidationMessageFor(model => model.Von, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+
+                                    @*Bis*@
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Bis, "Bis:", htmlAttributes: new { @class = "control-label col-md-2" })
+                                        <div class="col-md-10">
+                                            @Html.EditorFor(model => model.Bis, new { htmlAttributes = new { @class = "form-control validationMSG" } })
+                                            @Html.ValidationMessageFor(model => model.Bis, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <span class="SuchButten" style="font-size:30px" onclick="openNav()">Suche Ausführen</span>
                                 </div>
                            
                             </div>

@@ -1,51 +1,35 @@
 ﻿@{
     ViewBag.Title = "Home";
 }
-<style>
-    .zentrierung {
-        margin: auto;
-        width: 60%;
-    }
-
-    .zentrierungButton {
-        margin: auto;
-        width: 68%;
-    }
-
-
-</style>
-<!--HomeController IndexView--> 
+<!--HomeController IndexView-->
 
 <div class="container">
     <div class="row">
-        <div style="margin:20px">
-            <div style="margin:10px">
-                <h1 class="zentrierung">Menü</h1>
+        <div>
+            <div>
+                <h1 class="Zentrierung marginBTN">Home</h1>
             </div>
         </div>
-        <div style="margin:10px">
-            <div class="col-xs-12 zentrierungButton">
-                <span class="glyphicon glyphicon-asterisk"></span>
+        <div>
+            <div class="col-xs-12 Zentrierung marginBTN">
                 <a href="@Url.Action("IndexKunden", "Kunden")">
-                    <input type="button" class="btn btn-primary btn-lg" style="width:80%" value="Kunden" />
+                    <input type="button" class="btn btn-primary btn-lg zentrierungButton" value="Kunden" />
                 </a>
-            </div>
-            </div>
-        <div style="margin:10px">
-            <div class="col-xs-12 zentrierungButton">
-                <span class="glyphicon glyphicon-cloud"></span>
-                <a href="@Url.Action("IndexWaren", "Waren")">
-                    <input type="button" class="btn btn-primary btn-lg " style="width:80%" value="Waren" />
-                </a>
-            </div>
-            </div>
-        <div style="margin:10px">
-            <div class="col-xs-12 zentrierungButton">
-                <span class="glyphicon glyphicon-book"></span>
-                <a href="@Url.Action("IndexStatistik", "Statistik")">
-                    <input type="button" class="btn btn-primary btn-lg " style="width:80%" value="Statistik" />
-                </a>
-            </div>
             </div>
         </div>
+        <div>
+            <div class="col-xs-12 Zentrierung marginBTN">
+                <a href="@Url.Action("IndexWaren", "Waren")">
+                    <input type="button" class="btn btn-primary btn-lg zentrierungButton" value="Waren" />
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="col-xs-12 Zentrierung marginBTN">
+                <a href="@Url.Action("IndexStatistik", "Statistik")">
+                    <input type="button" class="btn btn-primary btn-lg zentrierungButton" value="Statistik" />
+                </a>
+            </div>
+        </div>
+    </div>
 </div>

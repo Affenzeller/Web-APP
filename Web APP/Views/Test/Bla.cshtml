@@ -1,0 +1,106 @@
+﻿
+@{
+    ViewBag.Title = "Bla";
+}
+
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+
+<table id="myTable">
+    <tr class="header">
+        <th style="width:60%;">Name</th>
+        <th style="width:40%;">Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Berglunds snabbkop</td>
+        <td>Sweden</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>
+            <a data-toggle="collapse" href="#collapse_1">
+                <div id="item1" class="">
+                    Vorname Nachname
+                </div>
+            </a>
+            </td>
+        <td>
+            <div id="collapse_1" class="panel-collapse collapse ">
+                <div class="panel-heading">
+                    <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+                    Vorname Nachname
+                </div>
+                <table class="table-bordered">
+                    <tr>
+                        <td>Adresse:</td>
+                        <td>Straße, PLZ</td>
+                    </tr>
+                    <tr>
+                        <td>Geburtstag:</td>
+                        <td>Gebdate</td>
+                    </tr>
+                    <tr>
+                        <td>Telefon:</td>
+                        <td>Telefon1</td>
+                    </tr>
+                    <tr>
+                        <td>Mobil:</td>
+                        <td>Telefon2</td>
+                    </tr>
+                    <tr>
+                        <td>Arbeit:</td>
+                        <td>Beruf</td>
+                    </tr>
+                    <tr>
+                        <td>Fax:</td>
+                        <td>Telefon3</td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>Email</td>
+                    </tr>
+                    <tr>
+                        <td>Kasse:</td>
+                        <td>Kassa</td>
+                    </tr>
+                    <tr>
+                        <td>Memo:</td>
+                        <td>Ende der Aufzählung</td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
