@@ -5,13 +5,8 @@ using System.Web;
 
 namespace Web_APP.Models
 {
-    public class KundenModel
+    public class WarenModel
     {
-        public int Zähler
-        {
-            get;set;
-        }
-
         public int Id
         {
             get; set;
@@ -70,7 +65,7 @@ namespace Web_APP.Models
         }
 
 
-        public List<KundenModel> StammKundenListe
+        public List<WarenModel> StammWarenListe
         {
             get; set;
         }

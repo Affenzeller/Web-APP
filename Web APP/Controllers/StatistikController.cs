@@ -13,51 +13,38 @@ namespace Web_APP.Controllers
         // GET: Statistik
         public ActionResult IndexStatistik()
         {
-            StatistikModel sm = new StatistikModel();
+            StatistikModel sm;
+            //Aus TestModel die Liste holen und tm_List benenen
             List<StatistikModel> sm_List = new List<StatistikModel>();
+            //foreach holt items aus db.stamm (Datenbank + welche tabelle)
+            foreach (var item in db.stamm)
+            {   //tm wird als neues TestModel befüllt (um alle vordifinierten Felder mit zu nehmen)
+                sm = new StatistikModel();
+                //tm.id mit dem item.id füllen
+                sm.Id = item.id;
+                sm.Name = item.name;
+                sm.Vorname = item.vorname;
+                //sm.Anrede = item.anrede;
+                //sm.Gebdat = item.gebdat; //DateTime? Problem?
+                //sm.Ort = item.ort;
+                //sm.PLZ = item.plz;
+                //sm.Straße = item.strasse;
+                //sm.Telefon1 = item.telefon1; //Festnetz Telefon
+                //sm.Telefon2 = item.telefon2; //Handy
+                //sm.Telefon3 = item.telefon3; //Fax
+                //sm.Kassa = item.kasse;
+                //sm.Beruf = item.beruf;
+                //sm.Email = item.mailkenn;
 
-            sm.Filiale1 = "Filale";
-            sm.Filiale2 = "Filale2";
-            sm.Filiale3 = "Filale2";
-            sm.Gruppe1 = "Gruppe1";
-            sm.Gruppe2 = "Gruppe2";
-            sm.Gruppe3 = "Gruppe3";
-            sm.POS1 = "POS1";
-            sm.POS2 = "POS2";
-            sm.POS3 = "POS3";
-            sm.Vergleich1 = false;
-            sm.Vergleich2 = true;
-            sm.Periode1 = DateTime.Today;
-            sm.Periode2 = DateTime.UtcNow;
-            sm.Periode3 = DateTime.Now;
-            sm.Von = DateTime.Today;
-            sm.Bis = DateTime.Today;
-
-
-            //foreach (var item in db.stamm)
-            //{
-            //    sm = new StatistikModel();
-            //    sm.Filiale1 = item.Filale1;
-            //    sm.Filiale2 = item.Filale2;
-            //    sm.Filiale3 = item.Filiale3;
-            //    sm.Gruppe1 = item.Gruppe1;
-            //    sm.Gruppe2 = item.Gruppe2;
-            //    sm.Gruppe3 = item.Gruppe3;
-            //    sm.POS1 = item.POS1;
-            //    sm.POS2 = item.POS2;
-            //    sm.POS3 = item.POS3;
-            //    sm.Vergleich1 = item.Vergleich1;
-            //    sm.Vergleich2 = item.Vergleich2;
-            //    sm.Periode1 = item.Periode1;
-            //    sm.Periode2 = item.Periode2;
-            //    sm.Periode3 = item.Periode3;
-
-            //    sm_List.Add(sm); 
-            //}
-
-            //sm = new StatistikModel();
-            //sm.StatistikListe = new List<StatistikModel>();
-            //sm.StatistikListe = sm_List;
+                sm_List.Add(sm);
+            }
+            //Erzeuge wieder ein neues TestModel
+            sm = new StatistikModel();
+            //nim vom TestModel die Liste (id, vorname, nachname) und mach daraus eine neue Liste vom TestModel
+            sm.StatistikListe = new List<StatistikModel>();
+            //befülle die TestModel<Liste>(id, vorname, nachname) mit der Liste von tm_List
+            sm.StatistikListe = sm_List;
+            //Schicke 
             return View(sm);
         }
     }

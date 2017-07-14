@@ -114,3 +114,4 @@ C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\Sy
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\bin\de\System.Web.WebPages.Razor.resources.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Debug\Web APP.dll
 C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Debug\Web APP.pdb
+C:\Users\usr_iom\Documents\Visual Studio 2017\Projects\Web APP\Web APP\obj\Debug\Web APP.csprojResolveAssemblyReference.cache

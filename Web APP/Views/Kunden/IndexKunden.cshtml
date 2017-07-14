@@ -1,8 +1,12 @@
-﻿@model Web_APP.Models.KundenModel
+﻿@using Web_APP.Models
+@model KundenModel
+
 @*@model KundenModel*@
-@{
+
+@*@{
     ViewBag.Title = "Kunden";
-}
+}*@
+
 <!--großer Container ANFANG-->
 <div class="row">
 
@@ -14,51 +18,48 @@
                 <input type="button" class="btn btn-primary btn-lg " value="Zurück zum Menü" />
             </a>
         </div>
+
+        @*<h2 class="Zentrierung">@Model.Zähler</h2>*@
+
+        @*@if (Model.StammKundenListe.Count() > 0)
+        {
+            <h2 class="Zentrierung">@Model.StammKundenListe[0].StammKundenListe</h2>
+        }
+        else
+        {
+            <h2 class="Zentrierung">NIX</h2>
+        }
+
+        @Html.Partial("~/Views/Kunden/_PartialPage.cshtml", Model)*@
+        @*<a href="~/Views/Kunden/_PartialPage.cshtml">~/Views/Kunden/_PartialPage.cshtml</a>
+        @Html.Partial("~/Views/Kunden/_PartialPage", Model);*@
+        <div  class="Zentrierung"></div>
+
         <div class="Zentrierung marginBTN">
             <div class="form-group " style="margin:2px;">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Schnell Suche.." class="SuchFeldBorder ">
-            <div class="form-group">
-            </div>
-            <form  name="form1" >
-                <div>
-                    <input type="text" placeholder="Durchsuchen Aller Einträge" id="SucheName" name="SucheName" class="SuchFeldBorder " required pattern="[A-Za-z].{1,20}" title="Bitte nur Text eingeben der Zwischen 1-20 Lang ist">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Schnell Suche.." class="SuchFeldBorder ">
+                <div class="form-group">
                 </div>
-                <div>
-                    <input class="btn btn-primary zentrierungButton" id="btnSuche" onclick="myFunction2()" type="submit" value="Suchen" />
-                </div>
-            </form>
-            @*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*@
-            @*@using (Html.BeginForm())
-            {
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Vorname, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Vorname, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Vorname, "", new { @class = "text-danger" })
-                        </div>
-                        <div class="form-group">
-                        @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
-                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="submit" value="GO" class="btn" />
-                        </div>
+                <form name="form1">
+                    <div>
+                        <input type="text" placeholder="Durchsuchen Aller Einträge" id="SucheName" name="SucheName" class="SuchFeldBorder " required pattern="[A-Za-z].{1,20}" title="Bitte nur Text eingeben der Zwischen 1-20 Lang ist">
                     </div>
-                </div>
-            }*@
-            @*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*@
-        </div>
+                    <div>
+                        <input class="btn btn-primary zentrierungButton" id="btnSuche" onclick="myFunction2()" type="submit" value="Suchen" />
+                    </div>
+                </form>
+              
             </div>
-            <div class="table-responsive">
-                <table id="myTable" class=" Zentrierung">
-                    @{
-                        
-                        int zähler = 0;
-                        foreach (var item in Model.StammKundenListe)
-                        {
+        </div>
+        <div class="table-responsive">
+            <table id="myTable" class=" Zentrierung">
+                @if (Model.StammKundenListe.Count() > 0)
+                {
+
+                    // Springt hier nicht hinein, sondern in IndexKunden.
+                    int zähler = 0;
+                    foreach (var item in Model.StammKundenListe)
+                    {
                             <tr>
                                 <td>
                                     <a data-toggle="collapse" href="#collapse_@Html.DisplayFor(modelItem => item.Id)">
@@ -77,140 +78,141 @@
                                             @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
                                         </div>
                                         <div class="panel-body">
-                                            <table class="table-bordered">
-                                                <tr>
-                                                    <td>Adresse:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Straße), @Html.DisplayFor(modelItem => item.PLZ)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Geburtstag:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Gebdat)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Telefon:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Telefon1)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Mobil:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Telefon2)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Arbeit:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Beruf)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Fax:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Telefon3)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Email:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Kasse:</td>
-                                                    <td>@Html.DisplayFor(modelItem => item.Kassa)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Memo:</td>
-                                                    <td>Ende der Aufzählung</td>
-                                                </tr>
-                                            </table>
-                                        </div>
+                                                <table class="table-bordered">
+                                                    <tr>
+                                                        <td>Adresse:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Straße), @Html.DisplayFor(modelItem => item.PLZ)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Geburtstag:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Gebdat)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Telefon:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Telefon1)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mobil:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Telefon2)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Arbeit:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Beruf)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fax:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Telefon3)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Email:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Kasse:</td>
+                                                        <td>@Html.DisplayFor(modelItem => item.Kassa)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Memo:</td>
+                                                        <td>Ende der Aufzählung</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
                                         <div class="panel-footer">
-                                            <a data-toggle="collapse" href="#collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)">Auftrag 1 Button</a>
-                                        </div>
+                                                <a data-toggle="collapse" href="#collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)">Auftrag 1 Button</a>
+                                            </div>
                                     </div>
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <div class="col-md-4">
-                                        <div id="collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse">
-                                            <div class="panel-heading">Auftrag1 Übersicht</div>
-                                            <div class="panel-body">
-                                                <table class="table-bordered">
-                                                    <tr class="greyField">
-                                                        <td>Bla</td>
-                                                        <td>Blub</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Auftrags Datum:</td>
-                                                        <td>1.1.1990</td>
-                                                    </tr>
-                                                    <tr class="greyField">
-                                                        <td>Bla</td>
-                                                        <td>Blub</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Auftrags Fassung:</td>
-                                                        <td>MusterFassung</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Auftrags Glas R:</td>
-                                                        <td>MusterGlasRechts</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Auftrags Glas L:</td>
-                                                        <td>MusterGlasLinks</td>
-                                                    </tr>
-                                                    <tr class="greyField">
-                                                        <td>Bla</td>
-                                                        <td>Blub</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Frame1:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Glasses1:</td>
-                                                        <td>103.00 // 103.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Frame2:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Auftrags Datum:</td>
-                                                        <td>1.1.1990</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Glasses2:</td>
-                                                        <td>0.00 // 0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Arbeit:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Handel:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Sonstiges:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Kassa:</td>
-                                                        <td>0.00 // 0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Nachlass:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Summe:</td>
-                                                        <td>206.00</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Anzahlung:</td>
-                                                        <td>0.00</td>
-                                                    </tr>
-                                                </table>
+                                    <td>
+                                        <div class="col-md-10">
+                                            <div id="collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse">
+                                                <div class="panel-heading">Auftrag1 Übersicht</div>
+                                                <div class="panel-body">
+                                                    <table class="table-bordered">
+                                                        <tr class="greyField">
+                                                            <td>Bla</td>
+                                                            <td>Blub</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auftrags Datum:</td>
+                                                            <td>1.1.1990</td>
+                                                        </tr>
+                                                        <tr class="greyField">
+                                                            <td>Bla</td>
+                                                            <td>Blub</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auftrags Fassung:</td>
+                                                            <td>MusterFassung</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auftrags Glas R:</td>
+                                                            <td>MusterGlasRechts</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auftrags Glas L:</td>
+                                                            <td>MusterGlasLinks</td>
+                                                        </tr>
+                                                        <tr class="greyField">
+                                                            <td>Bla</td>
+                                                            <td>Blub</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Frame1:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Glasses1:</td>
+                                                            <td>103.00 // 103.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Frame2:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Auftrags Datum:</td>
+                                                            <td>1.1.1990</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Glasses2:</td>
+                                                            <td>0.00 // 0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Arbeit:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Handel:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sonstiges:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Kassa:</td>
+                                                            <td>0.00 // 0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Nachlass:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Summe:</td>
+                                                            <td>206.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Anzahlung:</td>
+                                                            <td>0.00</td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </td>
-                            </tr>
+                                    </td>
+                                </tr>
                             zähler++;
                             if (zähler > 49)
                             {
@@ -218,12 +220,13 @@
                             }
                         }
                     }
-                </table>
-                <div>Es wurden @zähler Einträge Geladen</div>
+                
+            </table>
+            <div>Es wurden @Model.Zähler Einträge Geladen</div>
 
-            </div>
         </div>
     </div>
+</div>
 
 <!--großer Container ENDE-->
 <script>
@@ -235,7 +238,7 @@
         data = new FormData();
         data.append('_SearchString', searchString);
         $.ajax({
-            url: '@Url.Action("IndexKunden", "Kunden")',
+            url: '@Url.Action("SearchKunden", "Kunden")',
             data: data,
             enctype: 'multipart/form-data',
             processData: false,

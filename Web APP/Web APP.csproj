@@ -243,6 +243,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TestModel.cs" />
+    <Compile Include="Models\WarenModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1653,6 +1654,7 @@
     <Content Include="Views\Test\Bla.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Kunden\SearchKunden.cshtml" />
+    <Content Include="Views\Kunden\_PartialPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

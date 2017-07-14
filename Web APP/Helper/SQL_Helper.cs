@@ -64,10 +64,12 @@ namespace Web_APP.Helper
 
             string vn = namenliste[0];
             string nn = namenliste[1];
+            //string vn = "Lisa";
+            //string nn = "Baumgartner";
 
             // Verbindung öffnen
-            
-             connection.Open(); // Invalid Operation
+
+            connection.Open(); // Invalid Operation
             var trans = connection.BeginTransaction();
 
             // Prozedur mittels Namen(Postgres DB) und Connection aufrufen

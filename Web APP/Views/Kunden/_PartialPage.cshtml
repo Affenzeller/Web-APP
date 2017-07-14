@@ -1,0 +1,59 @@
+﻿
+@using Web_APP.Models
+@model KundenModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddProduct</title>
+</head>
+<body style="background-color:lightgrey">
+    <div>
+
+        <div class="table-responsive">
+            <table id="myTable" class=" Zentrierung">
+                @if (Model.StammKundenListe.Count() > 0)
+                {
+                    {
+                        foreach (var item in Model.StammKundenListe)
+                        {
+                            <tr>
+                                <td>
+                                    <a data-toggle="collapse" href="#collapse_@Html.DisplayFor(modelItem => item.Id)">
+                                        <div id="item1">
+                                            @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
+                                        </div>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    @*<div class="col-md-4">*@
+                                    <div id="collapse_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse ">
+                                        <div class="panel-heading">
+                                            <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+
+                                            @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
+
+                                            @Html.TextBox("id", item.Id)
+
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                }
+            </table>
+            <div>Es wurden @Model.Zähler Einträge Geladen</div>
+
+        </div>
+    </div>
+</body>
+</html>

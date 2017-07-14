@@ -107,7 +107,20 @@ namespace Web_APP.Models
         {
             get; set;
         }
-
+        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        public int Id
+        {
+            get; set;
+        }
+        public string Vorname
+        {
+            get; set;
+        }
+        public string Name
+        {
+            get; set;
+        }
+        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         public List<StatistikModel> StatistikListe
             {
     get; set;

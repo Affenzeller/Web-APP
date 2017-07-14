@@ -3,93 +3,48 @@
 @{
     ViewBag.Title = "Statistik";
 }
-@*<style>
-    .GroßeLeere {
-        width: 100%;
-        height: 100%;
-        background-color: whitesmoke;
-    }
-
-    .KleinesAuswahlFeld {
-        background-color: lightgray;
-        width: 100%;
-        height: 500px;
-        padding: 20%;
-    }
-
-    .AuswahlFeld {
-        border-style: solid;
-        border-color: black;
-        border-width: 2px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .overlay {
-        height: 0%;
-        width: 100%;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: ghostwhite;
-        background-color: ghostwhite;
-        overflow-y: hidden;
-        transition: 0.5s;
-    }
-
-    .overlay-content {
-        position: relative;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-    }
-
-    .overlay a {
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: red;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .StrichGrau {
-        border-bottom: solid 1px;
-        border-color: lightgray;
-    }
-</style>*@
 
 <div id="myNav" class="overlay">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <div style="background-color:azure">STATISTIK MIT VERLEICH FÜR DIE ZEIT VOM @DateTime.Today BIS @DateTime.Today <br /> SUMME ZEITRAUM: ???? VERGLEICH: ???? ABWEICHUNG: 0.00%</div>
+                <div class="ÜberschriftStatistik">STATISTIK MIT VERLEICH FÜR DIE ZEIT VOM @DateTime.Today BIS @DateTime.Today <br /> </div>
             </div>
-            <div class="overlay-content StrichGrau">
-               
-                    <div class="col-sm-2">Zeitraum</div>
-                    <div class="col-sm-2">@DateTime.Today</div>
-                    <div class="col-sm-1">Anzahl</div>
-                    <div class="col-sm-2">Bezeichnung</div>
-                    <div class="col-sm-2">0.00</div>
-                    <div class="col-sm-1">100%</div>
-                    <div class="col-sm-2">0.00</div>
-                
-               <br />
-           
-                    <div class="col-sm-2">Vergleich</div>
-                    <div class="col-sm-2">.</div>
-                    <div class="col-sm-1">Anzahl</div>
-                    <div class="col-sm-2">.</div>
-                    <div class="col-sm-2">0.00</div>
-                    <div class="col-sm-1">100%</div>
-                    <div class="col-sm-2">0.00</div>
-               
-            </div>
-           
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Summe</th>
+                        <th>Zeitraum VON</th>
+                        <th>Zeitraum BIS</th>
+                        <th>Vergleich</th>
+                        <th>?????</th>
+                        <th>Abweichung</th>
+                    </tr>
+                </thead>
+                @{
+                    int zähler = 0;
+                    foreach (var item in Model.StatistikListe)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>Platzhalter: @Html.DisplayFor(modelItem => item.Id) €</td>
+                                <td>P: 01.01.1990</td>
+                                <td>P: 31.12.2100</td>
+                                <td>P: Ja</td>
+                                <td>P: ?????</td>
+                                <td>P: 0,01 %</td>
+                            </tr>
+                        </tbody>
+                        zähler++;
+                        if (zähler > 19)
+                        {
+                            break;
+                        }
+                    }
+                }
+            </table>
+            <div>Es wurden @zähler Tabellen Einträge geladen</div>
         </div>
     </div>
 </div>
@@ -128,12 +83,12 @@
                         <!--Colappse Anfang-->
                         <div class="panel">
                             <div>
-
-                                <div class="col-md-2 GroßeLeere">
+                                
+                                <div class="col-md-2; GroßeLeere; borderLeft">
 
                                     <h3>VORAUSWAHL</h3>
                                     <!--Null Reference-->
-                                   @*Filialen*@
+                                    @*Filialen*@
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.Filiale1, "Filiale:", htmlAttributes: new { @class = "control-label col-md-2" })
                                         <div class="col-md-10">
@@ -195,9 +150,9 @@
                                             @Html.ValidationMessageFor(model => model.Bis, "", new { @class = "text-danger" })
                                         </div>
                                     </div>
-                                    <span class="SuchButten" style="font-size:30px" onclick="openNav()">Suche Ausführen</span>
+                                    <input type="button" class="btn btn-primary btn-lg zentrierungButton" style="margin:5px;" value="Starten der Auswertung" onclick="openNav()"/>
                                 </div>
-                           
+
                             </div>
                         </div>
                     </div><!--Colappse Ende-->
