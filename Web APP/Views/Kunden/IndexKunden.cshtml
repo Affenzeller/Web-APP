@@ -1,16 +1,7 @@
 ﻿@using Web_APP.Models
 @model KundenModel
 
-@*@model KundenModel*@
-
-@*@{
-    ViewBag.Title = "Kunden";
-}*@
-
-<!--großer Container ANFANG-->
 <div class="row">
-
-    <!--Kunde1 -->
     <div id="flexcontainer">
         <h2 class="Zentrierung">Kunden Menü</h2>
         <div class="zentrierungButton marginBTN">
@@ -18,22 +9,6 @@
                 <input type="button" class="btn btn-primary btn-lg " value="Zurück zum Menü" />
             </a>
         </div>
-
-        @*<h2 class="Zentrierung">@Model.Zähler</h2>*@
-
-        @*@if (Model.StammKundenListe.Count() > 0)
-        {
-            <h2 class="Zentrierung">@Model.StammKundenListe[0].StammKundenListe</h2>
-        }
-        else
-        {
-            <h2 class="Zentrierung">NIX</h2>
-        }
-
-        @Html.Partial("~/Views/Kunden/_PartialPage.cshtml", Model)*@
-        @*<a href="~/Views/Kunden/_PartialPage.cshtml">~/Views/Kunden/_PartialPage.cshtml</a>
-        @Html.Partial("~/Views/Kunden/_PartialPage", Model);*@
-        <div  class="Zentrierung"></div>
 
         <div class="Zentrierung marginBTN">
             <div class="form-group " style="margin:2px;">
@@ -48,190 +23,185 @@
                         <input class="btn btn-primary zentrierungButton" id="btnSuche" onclick="myFunction2()" type="submit" value="Suchen" />
                     </div>
                 </form>
-              
+
             </div>
         </div>
         <div class="table-responsive">
             <table id="myTable" class=" Zentrierung">
                 @if (Model.StammKundenListe.Count() > 0)
                 {
-
-                    // Springt hier nicht hinein, sondern in IndexKunden.
                     int zähler = 0;
                     foreach (var item in Model.StammKundenListe)
                     {
-                            <tr>
-                                <td>
-                                    <a data-toggle="collapse" href="#collapse_@Html.DisplayFor(modelItem => item.Id)">
-                                        <div id="item1">
-                                            @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    @*<div class="col-md-4">*@
-                                    <div id="collapse_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse ">
-                                        <div class="panel-heading">
-                                            <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
-                                            @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
-                                        </div>
-                                        <div class="panel-body">
-                                                <table class="table-bordered">
-                                                    <tr>
-                                                        <td>Adresse:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Straße), @Html.DisplayFor(modelItem => item.PLZ)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Geburtstag:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Gebdat)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Telefon:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Telefon1)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Mobil:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Telefon2)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Arbeit:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Beruf)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Fax:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Telefon3)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Email:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Kasse:</td>
-                                                        <td>@Html.DisplayFor(modelItem => item.Kassa)</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Memo:</td>
-                                                        <td>Ende der Aufzählung</td>
-                                                    </tr>
-                                                </table>
-                                            </div>
-
-                                        <div class="panel-footer">
-                                                <a data-toggle="collapse" href="#collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)">Auftrag 1 Button</a>
-                                            </div>
+                        <tr>
+                            <td>
+                                <a data-toggle="collapse" href="#collapse_@Html.DisplayFor(modelItem => item.Id)">
+                                    <div id="item1">
+                                        @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
                                     </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                    <td>
-                                        <div class="col-md-10">
-                                            <div id="collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse">
-                                                <div class="panel-heading">Auftrag1 Übersicht</div>
-                                                <div class="panel-body">
-                                                    <table class="table-bordered">
-                                                        <tr class="greyField">
-                                                            <td>Bla</td>
-                                                            <td>Blub</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Auftrags Datum:</td>
-                                                            <td>1.1.1990</td>
-                                                        </tr>
-                                                        <tr class="greyField">
-                                                            <td>Bla</td>
-                                                            <td>Blub</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Auftrags Fassung:</td>
-                                                            <td>MusterFassung</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Auftrags Glas R:</td>
-                                                            <td>MusterGlasRechts</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Auftrags Glas L:</td>
-                                                            <td>MusterGlasLinks</td>
-                                                        </tr>
-                                                        <tr class="greyField">
-                                                            <td>Bla</td>
-                                                            <td>Blub</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Frame1:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Glasses1:</td>
-                                                            <td>103.00 // 103.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Frame2:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Auftrags Datum:</td>
-                                                            <td>1.1.1990</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Glasses2:</td>
-                                                            <td>0.00 // 0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Arbeit:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Handel:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Sonstiges:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Kassa:</td>
-                                                            <td>0.00 // 0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Nachlass:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Summe:</td>
-                                                            <td>206.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Anzahlung:</td>
-                                                            <td>0.00</td>
-                                                        </tr>
-                                                    </table>
-                                                </div>
-                                            </div>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div id="collapse_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse ">
+                                    <div class="panel-heading">
+                                        <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
+                                        @Html.DisplayFor(modelItem => item.Vorname) @Html.DisplayFor(modelItem => item.Name)
+                                    </div>
+                                    <div class="panel-body">
+                                        <table class="table-bordered">
+                                            <tr>
+                                                <td>Adresse:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Straße), @Html.DisplayFor(modelItem => item.PLZ) </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Geburtstag:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Gebdat)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telefon:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Telefon1)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mobil:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Telefon2)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Arbeit:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Beruf)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fax:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Telefon3)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kasse:</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Kassa)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Memo:</td>
+                                                <td>Ende der Aufzählung</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="panel-footer">
+                                        <a data-toggle="collapse" href="#collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)">Auftrag 1 Button</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-md-10">
+                                    <div id="collapseAuftrag_@Html.DisplayFor(modelItem => item.Id)" class="panel-collapse collapse">
+                                        <div class="panel-heading">Auftrag1 Übersicht</div>
+                                        <div class="panel-body">
+                                            <table class="table-bordered">
+                                                <tr class="greyField">
+                                                    <td>Bla</td>
+                                                    <td>Blub</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Auftrags Datum:</td>
+                                                    <td>1.1.1990</td>
+                                                </tr>
+                                                <tr class="greyField">
+                                                    <td>Bla</td>
+                                                    <td>Blub</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Auftrags Fassung:</td>
+                                                    <td>MusterFassung</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Auftrags Glas R:</td>
+                                                    <td>MusterGlasRechts</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Auftrags Glas L:</td>
+                                                    <td>MusterGlasLinks</td>
+                                                </tr>
+                                                <tr class="greyField">
+                                                    <td>Bla</td>
+                                                    <td>Blub</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Frame1:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Glasses1:</td>
+                                                    <td>103.00 // 103.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Frame2:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Auftrags Datum:</td>
+                                                    <td>1.1.1990</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Glasses2:</td>
+                                                    <td>0.00 // 0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Arbeit:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Handel:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Sonstiges:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Kassa:</td>
+                                                    <td>0.00 // 0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Nachlass:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Summe:</td>
+                                                    <td>206.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anzahlung:</td>
+                                                    <td>0.00</td>
+                                                </tr>
+                                            </table>
                                         </div>
-                                    </td>
-                                </tr>
-                            zähler++;
-                            if (zähler > 49)
-                            {
-                                break;
-                            }
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        zähler++;
+                        if (zähler > 49)
+                        {
+                            break;
                         }
                     }
-                
+                }
+                else
+                {
+                    <tr> <td><div>Nothing Here</div></td></tr>
+                }
             </table>
-            <div>Es wurden @Model.Zähler Einträge Geladen</div>
-
+            <div class="Zentrierung MarginTop">Es wurden 50@*@zähler*@ Einträge Geladen</div>
         </div>
     </div>
 </div>
-
-<!--großer Container ENDE-->
 <script>
     function myFunction2() {
-        // Declare variables
         var searchString = document.getElementById("SucheName").value;
         console.log("Anfang: " + searchString);
 
@@ -249,16 +219,13 @@
         });
         console.log("Ende: " + searchString);
     }
-
     function myFunction() {
-        // Declare variables
         var input, filter, table, tr, td, i;
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("myTable");
         tr = table.getElementsByTagName("tr");
 
-        // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {
             td = tr[i].getElementsByTagName("td")[0];
             if (td) {

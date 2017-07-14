@@ -3,14 +3,9 @@
     ViewBag.Title = "IndexWaren";
 }
 
-<h2>IndexWaren</h2>
-
-<!--großer Container ANFANG-->
 <div class="container">
     <div class="row">
         <div id="flexcontainer">
-            <!--Kunde1 -->
-
             <a href="@Url.Action("IndexHome", "Home")">
                 <input type="button" class="btn btn-primary btn-lg   marginBTN " style="margin:5px" value="Zurück zum Menü" />
             </a>
@@ -19,10 +14,7 @@
             </div>
             <br />
             <div >
-                
-
 @{
-
     int zähler = 0;
     foreach (var item in Model.StammWarenListe)
     {
@@ -82,59 +74,8 @@
     }
 
     }
-                <div>Es wurden @zähler Einträge Geladen</div>
-                    @*<div class="col-md-12">
-                    <div class="col-md-4 marginBott">
-                        <a data-toggle="collapse" href="#collapse2"><div >Kunde2 Button</div></a>
-                    </div>
-                    <div class="col-md-8 borderLeft">
-                        <div id="collapse2" class="panel-collapse collapse">
-                            <div class="panel-heading" id="item2">
-                                <img style="height:50px; width:50px;" src="~/fonts/AuftrLogo.bmp" />
-                                <div >
-                                    Kunde Name Beta
-                                </div>
-                            </div>
-                            <div class="panel-body">
-                                <table class="table-bordered">
-                                    <tr>
-                                        <th>Anzahl Fassungen</th>
-                                        <th>Summe Kosten</th>
-                                        <th>???</th>
-                                        <th>???</th>
-                                        <th>???</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Andy Wolf</td>
-                                        <td>4445</td>
-                                        <td>54/16-42</td>
-                                        <td>21</td>
-                                        <td>289.00 // 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Andy Wolf</td>
-                                        <td>4445</td>
-                                        <td>54/16-42</td>
-                                        <td>21</td>
-                                        <td>289.00 // 5</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Andy Wolf</td>
-                                        <td>4445</td>
-                                        <td>54/16-42</td>
-                                        <td>21</td>
-                                        <td>289.00 // 5</td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    </div>*@
-
-
+                <div>Es wurden @zähler Einträge Geladen</div>                   
                 </div>
             </div>
         </div>
     </div>
-   
-        <!--Kunde1 Ende-->

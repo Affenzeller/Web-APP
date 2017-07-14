@@ -13,34 +13,24 @@ namespace Web_APP.Helper
     {
         public DataTable SelectStamm()
         {
-            // ConnectionString
             var connection = new Npgsql.NpgsqlConnection(ConfigurationManager.ConnectionStrings["datasevenEntitiesADO"].ToString());
 
-            // Verbindung öffnen
             connection.Open();
             var trans = connection.BeginTransaction();
 
-            // Prozedur mittels Namen(Postgres DB) und Connection aufrufen
             var command = new Npgsql.NpgsqlCommand("pStammAnzeigen", connection)
             {
                 CommandType = System.Data.CommandType.StoredProcedure
             };
 
-            //command.Parameters.AddWithValue("_filiale", 2);
-
             var da = new Npgsql.NpgsqlDataAdapter(command);
             var ds = new DataSet();
-            // DataSet füllen
             da.Fill(ds);
 
-            // Abfrage abschließen
             trans.Commit();
-            // Verbindung schließen
             connection.Close();
 
-            // Tabelle erzeugen
             DataTable firstTable = new DataTable();
-            // erhaltene Daten Tabelle speichern
             return firstTable = ds.Tables[0];
         }
 
@@ -54,7 +44,6 @@ namespace Web_APP.Helper
 
             string[] substrings = new string[2];
             char delimiter = ' ';
-
             substrings = value.Split(delimiter); 
 
             foreach (var substring in substrings)
@@ -64,15 +53,10 @@ namespace Web_APP.Helper
 
             string vn = namenliste[0];
             string nn = namenliste[1];
-            //string vn = "Lisa";
-            //string nn = "Baumgartner";
-
-            // Verbindung öffnen
 
             connection.Open(); // Invalid Operation
             var trans = connection.BeginTransaction();
 
-            // Prozedur mittels Namen(Postgres DB) und Connection aufrufen
             var command = new Npgsql.NpgsqlCommand("fstammfiltern", connection) //Invalid Operationen
             {
                 CommandType = System.Data.CommandType.StoredProcedure
@@ -82,24 +66,16 @@ namespace Web_APP.Helper
             command.Parameters.AddWithValue("nn", nn);
 
             var da = new Npgsql.NpgsqlDataAdapter(command);
-
             var ds = new DataSet();
 
-            // DataSet füllen
             da.Fill(ds);
-
-
-            // Abfrage abschließen
             trans.Commit();
-            // Verbindung schließen
             connection.Close();
-
-            // Tabelle erzeugen
             DataTable secoundTable = new DataTable();
-            // erhaltene Daten Tabelle speichern
             firstTable = ds.Tables[0];
 
             return firstTable;
+            // Count 0? return fistTable
         }
     }
 }

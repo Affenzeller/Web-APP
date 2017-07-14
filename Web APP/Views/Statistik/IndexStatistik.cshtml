@@ -49,7 +49,6 @@
     </div>
 </div>
 
-
 <div class="container">
 
     <div class="row">
@@ -60,7 +59,6 @@
             </a>
             <h2>Statistik</h2>
         </div>
-        <!--kleines Feld A-->
         <div class="col-lg-4 AuswahlFeld">
             <div class="row; KleinesAuswahlFeld">
                 <div class="">
@@ -68,26 +66,18 @@
                     <div class="col-md-12;">
                         <div>PC-KASSA</div>
                         <a data-toggle="collapse" href="#collapse1">Standard Filter</a>
-
                     </div>
                 </div>
             </div>
         </div>
-        <!--kleines Feld E-->
-        <!--Großes Feld A-->
         <div class="col-lg-8 AuswahlFeld">
-
             <div class="row">
                 <div class="col-md-12">
                     <div id="collapse1" class="panel-collapse collapse">
-                        <!--Colappse Anfang-->
                         <div class="panel">
                             <div>
-                                
                                 <div class="col-md-2; GroßeLeere; borderLeft">
-
                                     <h3>VORAUSWAHL</h3>
-                                    <!--Null Reference-->
                                     @*Filialen*@
                                     <div class="form-group">
                                         @Html.LabelFor(model => model.Filiale1, "Filiale:", htmlAttributes: new { @class = "control-label col-md-2" })
@@ -152,19 +142,12 @@
                                     </div>
                                     <input type="button" class="btn btn-primary btn-lg zentrierungButton" style="margin:5px;" value="Starten der Auswertung" onclick="openNav()"/>
                                 </div>
-
                             </div>
                         </div>
-                    </div><!--Colappse Ende-->
+                    </div>
                 </div>
             </div>
-
         </div>
-        <!--Großes Feld E-->
-        <!-- -->
-
-
-
     </div>
 </div>
 <script>

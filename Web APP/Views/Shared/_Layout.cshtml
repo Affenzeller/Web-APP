@@ -98,7 +98,6 @@
             justify-content: center;
             /*flex-wrap: wrap;
         align-items: center;*/
-            /*max-width:500px;*/
         }
         .marginBTN {
             margin:10px;
@@ -127,31 +126,14 @@
             margin:5px;
             font-size: medium;
             font-weight:bold;
-            font-family:Arial;
-                
+            font-family:Arial; 
+        }
+        .MarginTop{
+            margin-top:20px;
         }
     </style>
 </head>
 <body>
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Anwendungsname", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Startseite", "Index", "Home")</li>
-                        <li>@Html.ActionLink("Info", "About", "Home")</li>
-                        <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-                    </ul>
-                </div>
-            </div>
-        </div>*@
     <div class="container body-content">
         @RenderBody()
         <hr />
